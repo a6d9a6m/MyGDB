@@ -37,7 +37,7 @@ optional = [
 
 [tool.mygk-db.codex]
 model_provider = "dogapi"
-model = "gpt-5.4-codex"
+model = "gpt-5.4"
 model_reasoning_effort = "medium"
 
 [tool.mygk-db.codex.model_providers.dogapi]
