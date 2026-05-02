@@ -1,3 +1,0 @@
-[console_scripts]
-mygk-mcp-server = MyGK_DB.mcp_knowledge_server:main
-mygk-pipeline = MyGK_DB.pipeline.pipeline:main
