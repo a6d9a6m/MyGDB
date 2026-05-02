@@ -149,4 +149,5 @@ knowledge/
 - 不维护下载脚本中携带的 `model_client.py`、`create_provider`、`chat_with_retry`、`LLM_PROVIDER` 等多 provider 抽象。
 - 需要模型能力的脚本应调用 Codex CLI，例如 `codex exec`，或把任务交给 `.codex/agents/*.toml` 定义的角色执行。
 - 如需指定模型，使用 Codex CLI 的 `--model` 参数或仓库脚本中的 `CODEX_MODEL` 环境变量；本机 Codex 不在 PATH 时，用 `.env.local` 中的 `CODEX_BIN` 指向可执行文件。
+- CI/CD 的 Codex provider 默认为 `dogapi` 中转站，默认模型为 `gpt-5.4-codex`；密钥使用 `CODEX_API_KEY`，不要提交真实值。
 - Python 代码负责采集、格式校验、文件组织与索引更新；摘要、标签、评分等智能分析能力交给 Codex agent。

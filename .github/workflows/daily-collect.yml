@@ -13,9 +13,13 @@ jobs:
   collect:
     runs-on: ubuntu-latest
     env:
-      CODEX_MODEL: ${{ vars.CODEX_MODEL || 'gpt-5.5' }}
+      CODEX_MODEL_PROVIDER: ${{ vars.CODEX_MODEL_PROVIDER || 'dogapi' }}
+      CODEX_MODEL: ${{ vars.CODEX_MODEL || 'gpt-5.4-codex' }}
+      CODEX_MODEL_REASONING_EFFORT: ${{ vars.CODEX_MODEL_REASONING_EFFORT || 'medium' }}
+      CODEX_BASE_URL: ${{ vars.CODEX_BASE_URL || 'https://www.dogapi.cc/v1' }}
       GITHUB_TOKEN: ${{ github.token }}
-      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      CODEX_API_KEY: ${{ secrets.CODEX_API_KEY }}
+      OPENAI_API_KEY: ${{ secrets.CODEX_API_KEY }}
 
     steps:
       - name: Checkout repository
@@ -39,6 +43,22 @@ jobs:
 
       - name: Install Codex CLI
         run: npm install -g @openai/codex
+
+      - name: Configure Codex provider
+        run: |
+          mkdir -p "$HOME/.codex"
+          cat > "$HOME/.codex/config.toml" <<EOF
+          model_provider = "${CODEX_MODEL_PROVIDER}"
+          model = "${CODEX_MODEL}"
+          model_reasoning_effort = "${CODEX_MODEL_REASONING_EFFORT}"
+
+          [model_providers.${CODEX_MODEL_PROVIDER}]
+          name = "${CODEX_MODEL_PROVIDER}"
+          base_url = "${CODEX_BASE_URL}"
+          wire_api = "responses"
+          requires_openai_auth = true
+          supports_websockets = false
+          EOF
 
       - name: Run collection pipeline
         run: |

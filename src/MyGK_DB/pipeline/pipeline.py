@@ -32,6 +32,8 @@ ARTICLES_DIR = PROJECT_ROOT / "knowledge" / "articles"
 
 load_dotenv(PROJECT_ROOT / ".env.local")
 load_dotenv(PROJECT_ROOT / ".env")
+if os.getenv("CODEX_API_KEY") and not os.getenv("OPENAI_API_KEY"):
+    os.environ["OPENAI_API_KEY"] = os.environ["CODEX_API_KEY"]
 logger = logging.getLogger(__name__)
 
 

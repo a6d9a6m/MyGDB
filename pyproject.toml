@@ -25,8 +25,27 @@ where = ["src"]
 MyGK_DB = ["pipeline/rss/*.yaml"]
 
 [tool.mygk-db.env]
-required = ["OPENAI_API_KEY"]
-optional = ["CODEX_MODEL", "CODEX_BIN", "GITHUB_TOKEN"]
+required = ["CODEX_API_KEY"]
+optional = [
+  "CODEX_MODEL_PROVIDER",
+  "CODEX_MODEL",
+  "CODEX_MODEL_REASONING_EFFORT",
+  "CODEX_BASE_URL",
+  "CODEX_BIN",
+  "GITHUB_TOKEN",
+]
+
+[tool.mygk-db.codex]
+model_provider = "dogapi"
+model = "gpt-5.4-codex"
+model_reasoning_effort = "medium"
+
+[tool.mygk-db.codex.model_providers.dogapi]
+name = "dogapi"
+base_url = "https://www.dogapi.cc/v1"
+wire_api = "responses"
+requires_openai_auth = true
+supports_websockets = false
 
 [tool.mygk-db.github-actions]
 codex-install = "npm install -g @openai/codex"
