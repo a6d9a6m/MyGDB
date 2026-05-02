@@ -109,7 +109,7 @@ def step_collect(sources: list[str], limit: int) -> list[dict[str, Any]]:
         合并后的原始数据列表
     """
     print(f"\n{'='*60}")
-    print(f"📥 Step 1: 采集（sources={sources}, limit={limit}）")
+    print(f"[Collect] Step 1: 采集（sources={sources}, limit={limit}）")
     print(f"{'='*60}")
 
     all_items: list[dict[str, Any]] = []
@@ -231,7 +231,7 @@ def step_analyze(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
         带分析结果的数据列表
     """
     print(f"\n{'='*60}")
-    print(f"🔍 Step 2: 分析（{len(items)} 条内容）")
+    print(f"[Analyze] Step 2: 分析（{len(items)} 条内容）")
     print(f"{'='*60}")
 
     model = os.getenv("CODEX_MODEL")
@@ -284,7 +284,7 @@ def step_organize(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
         整理后的数据列表
     """
     print(f"\n{'='*60}")
-    print(f"📋 Step 3: 整理（{len(items)} 条内容）")
+    print(f"[Organize] Step 3: 整理（{len(items)} 条内容）")
     print(f"{'='*60}")
 
     # 去重：按 source_url 去重
@@ -351,7 +351,7 @@ def step_save(items: list[dict[str, Any]], dry_run: bool = False) -> list[Path]:
         已保存的文件路径列表
     """
     print(f"\n{'='*60}")
-    print(f"💾 Step 4: 保存（{len(items)} 条内容，dry_run={dry_run}）")
+    print(f"[Save] Step 4: 保存（{len(items)} 条内容，dry_run={dry_run}）")
     print(f"{'='*60}")
 
     ARTICLES_DIR.mkdir(parents=True, exist_ok=True)
@@ -412,7 +412,7 @@ def run_pipeline(
     if 1 in run_steps:
         raw_items = step_collect(sources, limit)
         if not raw_items:
-            print("\n⚠️  没有采集到任何数据，流水线结束。")
+            print("\n[WARN] 没有采集到任何数据，流水线结束。")
             return {"collected": 0, "analyzed": 0, "saved": 0}
 
     # Step 2: 分析

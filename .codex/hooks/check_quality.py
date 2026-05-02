@@ -297,10 +297,8 @@ def print_report(report: QualityReport) -> None:
         bar = "█" * bar_len + "░" * (20 - bar_len)
         print(f"  {d.name:8s} [{bar}] {d.score:5.1f}/{d.max_score:.0f}  {d.details}")
 
-    grade_emoji = {"A": "🟢", "B": "🟡", "C": "🔴"}
-    emoji = grade_emoji.get(report.grade, "")
     print(f"\n  总分: {report.total_score:.1f}/{report.max_total:.0f}  "
-          f"等级: {emoji} {report.grade}")
+          f"等级: {report.grade}")
 
 
 # ── CLI 入口 ─────────────────────────────────────────────────────────────
