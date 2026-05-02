@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mygk-db"
+version = "0.1.0"
+description = "Local AI knowledge-base collection, analysis, and publishing tools."
+readme = "AGENTS.md"
+requires-python = ">=3.11"
+dependencies = [
+  "httpx>=0.27",
+  "python-dotenv>=1.0",
+  "PyYAML>=6.0",
+]
+
+[project.scripts]
+mygk-pipeline = "MyGK_DB.pipeline.pipeline:main"
+mygk-mcp-server = "MyGK_DB.mcp_knowledge_server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+MyGK_DB = ["pipeline/rss/*.yaml"]
+
+[tool.mygk-db.env]
+required = ["OPENAI_API_KEY"]
+optional = ["CODEX_MODEL", "CODEX_BIN", "GITHUB_TOKEN"]
+
+[tool.mygk-db.github-actions]
+codex-install = "npm install -g @openai/codex"
+daily-collect-workflow = ".github/workflows/daily-collect.yml"
