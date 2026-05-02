@@ -1,0 +1,17 @@
+[features]
+codex_hooks = true
+
+[[hooks.PostToolUse]]
+matcher = "^Bash$"
+
+[[hooks.PostToolUse.hooks]]
+type = "command"
+command = "python .codex/hooks/validate_json.py knowledge/articles"
+timeout = 30
+statusMessage = "Validating knowledge article JSON"
+
+[[hooks.PostToolUse.hooks]]
+type = "command"
+command = "python .codex/hooks/check_quality.py knowledge/articles"
+timeout = 30
+statusMessage = "Checking knowledge article quality"
