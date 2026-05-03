@@ -1,0 +1,20 @@
+{
+  "id": "rss-20260503-004",
+  "title": "Uber torches 2026 AI budget on Claude Code in four months",
+  "source": "rss:Hacker News (Best)",
+  "source_url": "https://www.briefs.co/news/uber-torches-entire-2026-ai-budget-on-claude-code-in-four-months/",
+  "author": "Hacker News (Best)",
+  "published_at": "2026-05-03T03:56:08.555119+00:00",
+  "collected_at": "2026-05-03T03:56:08.555119+00:00",
+  "summary": "该内容聚焦 Uber 在 2026 年前四个月内就耗尽全年 AI 预算的案例，核心原因是工程团队大规模采用 Anthropic 的 Claude Code 进行软件开发。它反映出企业级 AI 编码工具已从辅助补全转向更高频、更昂贵的工作流自动化，同时也暴露出预算治理、ROI 衡量和大规模部署成本控制的重要性。对于关注 AI 工程化落地的团队，这是一条关于代码生成工具真实采用强度与组织成本结构变化的典型信号。",
+  "score": 7,
+  "tags": [
+    "llm",
+    "code-generation",
+    "deployment",
+    "tool-use"
+  ],
+  "audience": "intermediate",
+  "status": "review",
+  "updated_at": "2026-05-03T04:00:43.937015+00:00"
+}

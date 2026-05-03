@@ -1,0 +1,19 @@
+{
+  "id": "rss-20260503-017",
+  "title": "Toward Personalized Digital Twins for Cognitive Decline Assessment: A Multimodal, Uncertainty-Aware Framework",
+  "source": "rss:arXiv cs.AI",
+  "source_url": "https://arxiv.org/abs/2604.27217",
+  "author": "arXiv cs.AI",
+  "published_at": "2026-05-03T03:56:10.070811+00:00",
+  "collected_at": "2026-05-03T03:56:10.070811+00:00",
+  "summary": "该工作从标题看，提出了一种面向认知衰退评估的个性化数字孪生框架，强调结合多模态信号来建模个体状态，并通过不确定性感知机制提升评估可靠性。其潜在价值在于把 AI 感知、个体化建模与临床风险判断结合起来，为更早期、更连续的认知健康监测提供技术路径。若方法和实验设计充分，这类框架对医疗 AI 评估场景具有一定研究意义。",
+  "score": 7,
+  "tags": [
+    "vision",
+    "audio",
+    "evaluation"
+  ],
+  "audience": "advanced",
+  "status": "review",
+  "updated_at": "2026-05-03T04:00:43.937054+00:00"
+}

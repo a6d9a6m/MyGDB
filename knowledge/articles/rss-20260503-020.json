@@ -1,0 +1,21 @@
+{
+  "id": "rss-20260503-020",
+  "title": "Reinforced Agent: Inference-Time Feedback for Tool-Calling Agents",
+  "source": "rss:arXiv cs.AI",
+  "source_url": "https://arxiv.org/abs/2604.27233",
+  "author": "arXiv cs.AI",
+  "published_at": "2026-05-03T03:56:10.070829+00:00",
+  "collected_at": "2026-05-03T03:56:10.070829+00:00",
+  "summary": "这篇论文提出一种面向工具调用 Agent 的推理时反馈机制：在工具真正执行前，引入独立的 reviewer agent 审核临时 tool call，把评估从事后分析前移到执行环路中，实现实时纠错与风险缓解。作者还提出 helpfulness/harmfulness 指标来量化“纠错收益”和“新引入错误”的权衡，并在 BFCL 与 Tau2-Bench 上报告了工具选择与多轮任务表现提升，说明这种执行代理与审查代理解耦的多 Agent 架构具有较强实用价值。",
+  "score": 8,
+  "tags": [
+    "agent",
+    "tool-use",
+    "evaluation",
+    "multi-agent",
+    "reasoning"
+  ],
+  "audience": "advanced",
+  "status": "review",
+  "updated_at": "2026-05-03T04:00:43.937062+00:00"
+}

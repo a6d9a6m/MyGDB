@@ -1,0 +1,18 @@
+{
+  "id": "rss-20260503-010",
+  "title": "Unsupervised Electrofacies Classification and Porosity Characterization in the Offshore Keta Basin Using Wireline Logs",
+  "source": "rss:arXiv cs.AI",
+  "source_url": "https://arxiv.org/abs/2604.27126",
+  "author": "arXiv cs.AI",
+  "published_at": "2026-05-03T03:56:10.070775+00:00",
+  "collected_at": "2026-05-03T03:56:10.070775+00:00",
+  "summary": "该工作聚焦海上 Keta 盆地的测井数据分析，利用无监督学习对 electrofacies 进行分类，并进一步表征储层孔隙度分布。其价值在于将 AI 聚类方法应用到地球科学解释流程中，帮助在缺少人工标注的情况下提升岩相识别与储层评价效率，但从标题看更偏行业应用而非通用 AI 方法创新。",
+  "score": 7,
+  "tags": [
+    "evaluation",
+    "reasoning"
+  ],
+  "audience": "intermediate",
+  "status": "review",
+  "updated_at": "2026-05-03T04:00:43.937035+00:00"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "github-20260503-019",
+  "title": "langchain-ai/langgraph",
+  "source": "github",
+  "source_url": "https://github.com/langchain-ai/langgraph",
+  "author": "langchain-ai",
+  "published_at": "2026-05-03T01:05:11Z",
+  "collected_at": "2026-05-03T03:56:07.219432+00:00",
+  "summary": "LangGraph 是 LangChain 生态中的一个框架，用图结构来编排和管理语言模型驱动的 agent 工作流，强调状态管理、分支控制、循环执行和容错能力。它适合构建需要多步骤推理、工具调用和长期运行的复杂 agent 系统，相比线性链式流程更易扩展、调试和维护。对于需要将 LLM 应用工程化落地的团队，这类图式编排方式具备较高的实用价值。",
+  "score": 8,
+  "tags": [
+    "agent",
+    "multi-agent",
+    "tool-use",
+    "reasoning",
+    "llm"
+  ],
+  "audience": "intermediate",
+  "status": "review",
+  "updated_at": "2026-05-03T04:00:43.936999+00:00"
+}

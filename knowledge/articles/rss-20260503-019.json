@@ -1,0 +1,19 @@
+{
+  "id": "rss-20260503-019",
+  "title": "When Roles Fail: Epistemic Constraints on Advocate Role Fidelity in LLM-Based Political Statement Analysis",
+  "source": "rss:arXiv cs.AI",
+  "source_url": "https://arxiv.org/abs/2604.27228",
+  "author": "arXiv cs.AI",
+  "published_at": "2026-05-03T03:56:10.070824+00:00",
+  "collected_at": "2026-05-03T03:56:10.070824+00:00",
+  "summary": "该研究聚焦于在政治陈述分析任务中，让大语言模型扮演“倡导者”角色时出现的失真问题，讨论角色设定为何会受到认识论约束而无法稳定保持角色忠实度。其价值在于为基于角色提示的 LLM 分析方法提供了批判性评估视角，帮助研究者理解这类方法在政治文本判断、立场归因和可靠性评测中的边界。",
+  "score": 7,
+  "tags": [
+    "llm",
+    "evaluation",
+    "reasoning"
+  ],
+  "audience": "advanced",
+  "status": "review",
+  "updated_at": "2026-05-03T04:00:43.937060+00:00"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "rss-20260503-014",
+  "title": "Step-level Optimization for Efficient Computer-use Agents",
+  "source": "rss:arXiv cs.AI",
+  "source_url": "https://arxiv.org/abs/2604.27151",
+  "author": "arXiv cs.AI",
+  "published_at": "2026-05-03T03:56:10.070796+00:00",
+  "collected_at": "2026-05-03T03:56:10.070796+00:00",
+  "summary": "这篇工作聚焦于计算机使用型智能体的步骤级优化，核心目标是在执行多步界面操作或工具调用时减少冗余步骤、提升整体效率。其价值在于把优化粒度下沉到单步决策层，有望在保证任务成功率的前提下，降低延迟与成本，并为评测和训练高效 agent 提供更细的方法框架。",
+  "score": 7,
+  "tags": [
+    "agent",
+    "tool-use",
+    "evaluation"
+  ],
+  "audience": "intermediate",
+  "status": "review",
+  "updated_at": "2026-05-03T04:00:43.937046+00:00"
+}

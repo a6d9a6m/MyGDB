@@ -1,0 +1,17 @@
+{
+  "id": "rss-20260503-016",
+  "title": "Evaluating TabPFN for Mild Cognitive Impairment to Alzheimer's Disease Conversion in Data Limited Settings",
+  "source": "rss:arXiv cs.AI",
+  "source_url": "https://arxiv.org/abs/2604.27195",
+  "author": "arXiv cs.AI",
+  "published_at": "2026-05-03T03:56:10.070805+00:00",
+  "collected_at": "2026-05-03T03:56:10.070805+00:00",
+  "summary": "这篇工作聚焦于数据受限场景下，评估 TabPFN 是否适合用于预测轻度认知障碍患者向阿尔茨海默病的转化风险。其技术价值在于把面向小样本表格数据的基础预测方法引入医学 AI 评测语境，帮助判断这类模型在临床早筛与风险分层任务中的实际潜力与局限。",
+  "score": 7,
+  "tags": [
+    "evaluation"
+  ],
+  "audience": "advanced",
+  "status": "review",
+  "updated_at": "2026-05-03T04:00:43.937052+00:00"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "rss-20260503-011",
+  "title": "TRUST: A Framework for Decentralized AI Service v.0.1",
+  "source": "rss:arXiv cs.AI",
+  "source_url": "https://arxiv.org/abs/2604.27132",
+  "author": "arXiv cs.AI",
+  "published_at": "2026-05-03T03:56:10.070780+00:00",
+  "collected_at": "2026-05-03T03:56:10.070780+00:00",
+  "summary": "该内容看起来介绍了一个名为 TRUST 的去中心化 AI 服务框架 v0.1，重点可能在于让多个 AI 服务节点在分布式环境中协作、调用与管理。其价值主要在于探索去中心化架构下的 AI 服务编排、可信交互与系统部署方向，但从给定信息来看仍偏框架级介绍而非完整落地方案。",
+  "score": 7,
+  "tags": [
+    "multi-agent",
+    "deployment",
+    "security"
+  ],
+  "audience": "intermediate",
+  "status": "review",
+  "updated_at": "2026-05-03T04:00:43.937038+00:00"
+}
