@@ -1,17 +1,20 @@
 {
   "id": "rss-20260503-016",
-  "title": "Evaluating TabPFN for Mild Cognitive Impairment to Alzheimer's Disease Conversion in Data Limited Settings",
-  "source": "rss:arXiv cs.AI",
-  "source_url": "https://arxiv.org/abs/2604.27195",
-  "author": "arXiv cs.AI",
-  "published_at": "2026-05-03T03:56:10.070805+00:00",
-  "collected_at": "2026-05-03T03:56:10.070805+00:00",
-  "summary": "这篇工作聚焦于数据受限场景下，评估 TabPFN 是否适合用于预测轻度认知障碍患者向阿尔茨海默病的转化风险。其技术价值在于把面向小样本表格数据的基础预测方法引入医学 AI 评测语境，帮助判断这类模型在临床早筛与风险分层任务中的实际潜力与局限。",
+  "title": "Training and Finetuning Multimodal Embedding &amp; Reranker Models with Sentence Transformers",
+  "source": "rss:Hugging Face Blog",
+  "source_url": "https://huggingface.co/blog/train-multimodal-sentence-transformers",
+  "author": "Hugging Face Blog",
+  "published_at": "2026-05-03T09:14:21.014304+00:00",
+  "collected_at": "2026-05-03T09:14:21.014304+00:00",
+  "summary": "这篇内容聚焦于如何使用 Sentence Transformers 训练和微调多模态嵌入模型与重排序模型，以提升文本与图像等跨模态检索任务的表示质量和排序效果。其核心价值在于为构建高质量检索、语义搜索和 RAG 系统提供可落地的方法论，帮助开发者针对具体数据集优化召回与重排性能。",
   "score": 7,
   "tags": [
+    "fine-tuning",
+    "rag",
+    "vision",
     "evaluation"
   ],
-  "audience": "advanced",
+  "audience": "intermediate",
   "status": "review",
-  "updated_at": "2026-05-03T04:00:43.937052+00:00"
+  "updated_at": "2026-05-03T09:22:12.710943+00:00"
 }

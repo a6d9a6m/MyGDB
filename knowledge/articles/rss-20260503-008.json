@@ -1,19 +1,20 @@
 {
   "id": "rss-20260503-008",
-  "title": "End-to-end autonomous scientific discovery on a real optical platform",
-  "source": "rss:arXiv cs.AI",
-  "source_url": "https://arxiv.org/abs/2604.27092",
-  "author": "arXiv cs.AI",
-  "published_at": "2026-05-03T03:56:10.070766+00:00",
-  "collected_at": "2026-05-03T03:56:10.070766+00:00",
-  "summary": "这项工作看起来聚焦于把自主科学发现流程真正落到现实光学实验平台上，实现从实验设计、执行到结果分析的端到端闭环自动化。其价值在于将 AI agent 式决策与真实物理系统结合，验证自主科研系统在高成本实验环境中的可行性，并为自动化实验、科学推理和实验优化提供参考。",
-  "score": 8,
+  "title": "Introducing NVIDIA Nemotron 3 Nano Omni: Long-Context Multimodal Intelligence for Documents, Audio and Video Agents",
+  "source": "rss:Hugging Face Blog",
+  "source_url": "https://huggingface.co/blog/nvidia/nemotron-3-nano-omni-multimodal-intelligence",
+  "author": "Hugging Face Blog",
+  "published_at": "2026-05-03T09:14:21.014271+00:00",
+  "collected_at": "2026-05-03T09:14:21.014271+00:00",
+  "summary": "该内容介绍了 NVIDIA 推出的 Nemotron 3 Nano Omni，多模态长上下文模型面向文档、音频和视频代理场景，强调在单一模型中统一处理多种输入模态的能力。其价值在于为企业级智能体提供更强的跨模态理解与长文档处理基础，适合用于检索增强、内容分析和复杂工作流自动化。",
+  "score": 7,
   "tags": [
-    "agent",
-    "reasoning",
-    "evaluation"
+    "llm",
+    "vision",
+    "audio",
+    "agent"
   ],
-  "audience": "advanced",
+  "audience": "intermediate",
   "status": "review",
-  "updated_at": "2026-05-03T04:00:43.937028+00:00"
+  "updated_at": "2026-05-03T09:22:12.710924+00:00"
 }

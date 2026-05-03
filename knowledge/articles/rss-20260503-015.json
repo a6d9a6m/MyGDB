@@ -1,18 +1,19 @@
 {
   "id": "rss-20260503-015",
-  "title": "Interval Orders, Biorders and Credibility-limited Belief Revision",
-  "source": "rss:arXiv cs.AI",
-  "source_url": "https://arxiv.org/abs/2604.27156",
-  "author": "arXiv cs.AI",
-  "published_at": "2026-05-03T03:56:10.070800+00:00",
-  "collected_at": "2026-05-03T03:56:10.070800+00:00",
-  "summary": "这篇论文研究在信念修正中用比“总预序”更一般的排序结构来表示世界可信度，重点引入 interval orders 和 biorders 两类偏好关系，并给出相应修正规则族的公理化刻画。作者进一步分析 biorder 方法在满足 Success 的同时可能导致不一致输出，因此提出基于“不可置信输入”过滤的 credibility-limited revision 变体，以在放弃部分优先接纳新信息的前提下保证一致性。其价值在于为非单调推理与知识更新提供了更细粒度的形式化工具，适合建模“信息先被拒绝、在补充解释后再被接受”的复杂认知场景。",
+  "title": "The PR you would have opened yourself",
+  "source": "rss:Hugging Face Blog",
+  "source_url": "https://huggingface.co/blog/transformers-to-mlx",
+  "author": "Hugging Face Blog",
+  "published_at": "2026-05-03T09:14:21.014300+00:00",
+  "collected_at": "2026-05-03T09:14:21.014300+00:00",
+  "summary": "这篇内容大概率围绕开发者工作流中的自动化协作展开，主题像是在描述一个能够主动生成接近人工预期修改方案的 AI 编码助手。结合 Hugging Face Blog 的技术语境，它的价值更可能在于展示模型如何理解代码上下文、提出高质量补丁建议，并提升日常 PR 产出的效率。",
   "score": 7,
   "tags": [
-    "reasoning",
-    "agent"
+    "agent",
+    "code-generation",
+    "tool-use"
   ],
-  "audience": "advanced",
+  "audience": "intermediate",
   "status": "review",
-  "updated_at": "2026-05-03T04:00:43.937049+00:00"
+  "updated_at": "2026-05-03T09:22:12.710940+00:00"
 }

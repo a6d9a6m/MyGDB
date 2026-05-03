@@ -1,17 +1,19 @@
 {
   "id": "rss-20260503-006",
-  "title": "Binary Spiking Neural Networks as Causal Models",
-  "source": "rss:arXiv cs.AI",
-  "source_url": "https://arxiv.org/abs/2604.27007",
-  "author": "arXiv cs.AI",
-  "published_at": "2026-05-03T03:56:10.070748+00:00",
-  "collected_at": "2026-05-03T03:56:10.070748+00:00",
-  "summary": "该工作聚焦于将二值脉冲神经网络（Binary Spiking Neural Networks）作为因果模型来建模，探索事件驱动神经计算与因果推断之间的结合方式。其价值在于为高效、可解释的智能系统提供一种新视角，尤其可能帮助研究低功耗神经网络如何表达因果结构与动态推理过程。",
+  "title": "Granite 4.1 LLMs: How They’re Built",
+  "source": "rss:Hugging Face Blog",
+  "source_url": "https://huggingface.co/blog/ibm-granite/granite-4-1",
+  "author": "Hugging Face Blog",
+  "published_at": "2026-05-03T09:14:21.014225+00:00",
+  "collected_at": "2026-05-03T09:14:21.014225+00:00",
+  "summary": "这篇内容大概率围绕 Granite 4.1 系列大语言模型的构建过程展开，介绍其训练数据、模型设计、对齐或后训练方法，以及为不同任务做出的工程权衡。其价值在于帮助读者理解一款实际可用 LLM 从研发到落地的关键技术路径，对评估开源模型能力与训练方法具有参考意义。",
   "score": 7,
   "tags": [
-    "reasoning"
+    "llm",
+    "reasoning",
+    "fine-tuning"
   ],
-  "audience": "advanced",
+  "audience": "intermediate",
   "status": "review",
-  "updated_at": "2026-05-03T04:00:43.937021+00:00"
+  "updated_at": "2026-05-03T09:22:12.710918+00:00"
 }

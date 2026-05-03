@@ -1,19 +1,18 @@
 {
   "id": "rss-20260503-011",
-  "title": "TRUST: A Framework for Decentralized AI Service v.0.1",
-  "source": "rss:arXiv cs.AI",
-  "source_url": "https://arxiv.org/abs/2604.27132",
-  "author": "arXiv cs.AI",
-  "published_at": "2026-05-03T03:56:10.070780+00:00",
-  "collected_at": "2026-05-03T03:56:10.070780+00:00",
-  "summary": "该内容看起来介绍了一个名为 TRUST 的去中心化 AI 服务框架 v0.1，重点可能在于让多个 AI 服务节点在分布式环境中协作、调用与管理。其价值主要在于探索去中心化架构下的 AI 服务编排、可信交互与系统部署方向，但从给定信息来看仍偏框架级介绍而非完整落地方案。",
+  "title": "How to Use Transformers.js in a Chrome Extension",
+  "source": "rss:Hugging Face Blog",
+  "source_url": "https://huggingface.co/blog/transformersjs-chrome-extension",
+  "author": "Hugging Face Blog",
+  "published_at": "2026-05-03T09:14:21.014287+00:00",
+  "collected_at": "2026-05-03T09:14:21.014287+00:00",
+  "summary": "这篇内容聚焦于如何在 Chrome Extension 中集成 Transformers.js，在浏览器侧直接运行模型推理能力。其核心价值在于帮助开发者把轻量级 AI 能力嵌入扩展插件，实现更低延迟、更强隐私保护以及无需依赖后端服务的部署方案。",
   "score": 7,
   "tags": [
-    "multi-agent",
-    "deployment",
-    "security"
+    "llm",
+    "deployment"
   ],
   "audience": "intermediate",
   "status": "review",
-  "updated_at": "2026-05-03T04:00:43.937038+00:00"
+  "updated_at": "2026-05-03T09:22:12.710931+00:00"
 }

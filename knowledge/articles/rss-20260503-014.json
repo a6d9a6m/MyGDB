@@ -1,19 +1,19 @@
 {
   "id": "rss-20260503-014",
-  "title": "Step-level Optimization for Efficient Computer-use Agents",
-  "source": "rss:arXiv cs.AI",
-  "source_url": "https://arxiv.org/abs/2604.27151",
-  "author": "arXiv cs.AI",
-  "published_at": "2026-05-03T03:56:10.070796+00:00",
-  "collected_at": "2026-05-03T03:56:10.070796+00:00",
-  "summary": "这篇工作聚焦于计算机使用型智能体的步骤级优化，核心目标是在执行多步界面操作或工具调用时减少冗余步骤、提升整体效率。其价值在于把优化粒度下沉到单步决策层，有望在保证任务成功率的前提下，降低延迟与成本，并为评测和训练高效 agent 提供更细的方法框架。",
+  "title": "Ecom-RLVE: Adaptive Verifiable Environments for E-Commerce Conversational Agents",
+  "source": "rss:Hugging Face Blog",
+  "source_url": "https://huggingface.co/blog/ecom-rlve",
+  "author": "Hugging Face Blog",
+  "published_at": "2026-05-03T09:14:21.014297+00:00",
+  "collected_at": "2026-05-03T09:14:21.014297+00:00",
+  "summary": "这篇内容聚焦于面向电商对话智能体的可验证环境设计，提出一种自适应的 RLVE 框架，用于在更贴近真实业务的交互场景中评估和训练 Agent。其价值在于把任务环境、行为验证与效果评估结合起来，有助于提升电商客服或导购类智能体的可靠性、可测性和落地质量。",
   "score": 7,
   "tags": [
     "agent",
-    "tool-use",
-    "evaluation"
+    "evaluation",
+    "tool-use"
   ],
   "audience": "intermediate",
   "status": "review",
-  "updated_at": "2026-05-03T04:00:43.937046+00:00"
+  "updated_at": "2026-05-03T09:22:12.710937+00:00"
 }

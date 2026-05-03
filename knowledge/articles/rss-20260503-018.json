@@ -1,20 +1,19 @@
 {
   "id": "rss-20260503-018",
-  "title": "Web2BigTable: A Bi-Level Multi-Agent LLM System for Internet-Scale Information Search and Extraction",
-  "source": "rss:arXiv cs.AI",
-  "source_url": "https://arxiv.org/abs/2604.27221",
-  "author": "arXiv cs.AI",
-  "published_at": "2026-05-03T03:56:10.070816+00:00",
-  "collected_at": "2026-05-03T03:56:10.070816+00:00",
-  "summary": "这篇工作提出了一个面向互联网规模信息搜索与抽取的双层多智能体 LLM 系统，目标是把开放网页中的非结构化信息高效整理为结构化表格结果。其价值在于通过分层 Agent 协作提升大规模检索、网页理解与信息抽取的准确性和可扩展性，对自动化情报收集、知识库构建和复杂信息发现任务具有实际参考意义。",
-  "score": 8,
+  "title": "Meet HoloTab by HCompany. Your AI browser companion.",
+  "source": "rss:Hugging Face Blog",
+  "source_url": "https://huggingface.co/blog/Hcompany/holotab",
+  "author": "Hugging Face Blog",
+  "published_at": "2026-05-03T09:14:21.014310+00:00",
+  "collected_at": "2026-05-03T09:14:21.014310+00:00",
+  "summary": "这篇内容介绍了 HCompany 推出的 HoloTab，一款定位为“AI 浏览器伴侣”的产品，核心方向很可能是把大模型能力直接嵌入网页浏览与信息获取流程中。其价值在于提升用户在搜索、阅读、整理和交互式网页任务中的效率，但从现有信息看更偏产品发布介绍，技术细节与实现深度暂时有限。",
+  "score": 6,
   "tags": [
-    "multi-agent",
     "agent",
     "llm",
     "tool-use"
   ],
-  "audience": "advanced",
+  "audience": "intermediate",
   "status": "review",
-  "updated_at": "2026-05-03T04:00:43.937057+00:00"
+  "updated_at": "2026-05-03T09:22:12.710947+00:00"
 }

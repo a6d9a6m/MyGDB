@@ -1,19 +1,17 @@
 {
   "id": "rss-20260503-019",
-  "title": "When Roles Fail: Epistemic Constraints on Advocate Role Fidelity in LLM-Based Political Statement Analysis",
-  "source": "rss:arXiv cs.AI",
-  "source_url": "https://arxiv.org/abs/2604.27228",
-  "author": "arXiv cs.AI",
-  "published_at": "2026-05-03T03:56:10.070824+00:00",
-  "collected_at": "2026-05-03T03:56:10.070824+00:00",
-  "summary": "该研究聚焦于在政治陈述分析任务中，让大语言模型扮演“倡导者”角色时出现的失真问题，讨论角色设定为何会受到认识论约束而无法稳定保持角色忠实度。其价值在于为基于角色提示的 LLM 分析方法提供了批判性评估视角，帮助研究者理解这类方法在政治文本判断、立场归因和可靠性评测中的边界。",
+  "title": "Waypoint-1.5: Higher-Fidelity Interactive Worlds for Everyday GPUs",
+  "source": "rss:Hugging Face Blog",
+  "source_url": "https://huggingface.co/blog/waypoint-1-5",
+  "author": "Hugging Face Blog",
+  "published_at": "2026-05-03T09:14:21.014314+00:00",
+  "collected_at": "2026-05-03T09:14:21.014314+00:00",
+  "summary": "Waypoint-1.5 关注在日常消费级 GPU 上生成或驱动更高保真度的可交互世界，核心价值在于降低高质量世界模型或交互式视觉模拟的算力门槛。相比更重型的方案，这类工作通常强调更好的画面一致性、交互反馈与推理效率，使研究原型更接近可实际部署的创作、仿真或智能体环境。对 AI 开发者而言，它展示了如何在有限硬件条件下推进视觉生成与交互世界建模。",
   "score": 7,
   "tags": [
-    "llm",
-    "evaluation",
-    "reasoning"
+    "vision"
   ],
-  "audience": "advanced",
+  "audience": "intermediate",
   "status": "review",
-  "updated_at": "2026-05-03T04:00:43.937060+00:00"
+  "updated_at": "2026-05-03T09:22:12.710949+00:00"
 }

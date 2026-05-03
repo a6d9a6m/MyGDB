@@ -1,18 +1,19 @@
 {
   "id": "rss-20260503-005",
-  "title": "Compositional Meta-Learning for Mitigating Task Heterogeneity in Physics-Informed Neural Networks",
-  "source": "rss:arXiv cs.AI",
-  "source_url": "https://arxiv.org/abs/2604.26999",
-  "author": "arXiv cs.AI",
-  "published_at": "2026-05-03T03:56:10.070705+00:00",
-  "collected_at": "2026-05-03T03:56:10.070705+00:00",
-  "summary": "这项工作聚焦于 Physics-Informed Neural Networks 在面对任务异质性时的适应问题，提出了一种组合式元学习方法，用于在不同物理任务之间更高效地迁移与复用知识。其核心价值在于提升 PINN 在多任务、跨场景建模中的泛化能力与训练稳定性，对科学机器学习和复杂物理系统建模具有实际意义。",
+  "title": "AI evals are becoming the new compute bottleneck",
+  "source": "rss:Hugging Face Blog",
+  "source_url": "https://huggingface.co/blog/evaleval/eval-costs-bottleneck",
+  "author": "Hugging Face Blog",
+  "published_at": "2026-05-03T09:14:21.014192+00:00",
+  "collected_at": "2026-05-03T09:14:21.014192+00:00",
+  "summary": "文章讨论了随着大模型能力提升，评测（evals）本身正在成为新的系统瓶颈：不仅需要更高质量、更贴近真实场景的基准，还需要更高的执行成本、人工校验和持续迭代。其价值在于提醒开发者和研究团队，模型优化不能只看训练与推理成本，还要把评测体系建设视为 AI 产品与研究流程中的核心基础设施。",
   "score": 7,
   "tags": [
-    "reasoning",
-    "evaluation"
+    "evaluation",
+    "llm",
+    "reasoning"
   ],
-  "audience": "advanced",
+  "audience": "intermediate",
   "status": "review",
-  "updated_at": "2026-05-03T04:00:43.937018+00:00"
+  "updated_at": "2026-05-03T09:22:12.710910+00:00"
 }

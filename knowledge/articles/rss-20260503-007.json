@@ -1,19 +1,18 @@
 {
   "id": "rss-20260503-007",
-  "title": "When Your LLM Reaches End-of-Life: A Framework for Confident Model Migration in Production Systems",
-  "source": "rss:arXiv cs.AI",
-  "source_url": "https://arxiv.org/abs/2604.27082",
-  "author": "arXiv cs.AI",
-  "published_at": "2026-05-03T03:56:10.070757+00:00",
-  "collected_at": "2026-05-03T03:56:10.070757+00:00",
-  "summary": "该内容聚焦于当生产环境中的大模型进入生命周期终点时，如何系统化地完成模型迁移，以降低替换过程中的性能退化、行为漂移和业务风险。其核心价值在于提供一套面向生产系统的迁移框架，帮助团队在评测、验证和上线环节建立更有信心的决策流程，适合关注 LLM 运维与模型升级治理的工程实践。",
+  "title": "DeepInfra on Hugging Face Inference Providers 🔥",
+  "source": "rss:Hugging Face Blog",
+  "source_url": "https://huggingface.co/blog/inference-providers-deepinfra",
+  "author": "Hugging Face Blog",
+  "published_at": "2026-05-03T09:14:21.014266+00:00",
+  "collected_at": "2026-05-03T09:14:21.014266+00:00",
+  "summary": "这篇文章宣布 DeepInfra 已接入 Hugging Face Inference Providers，使开发者可以直接在 Hugging Face Hub 的模型页以及官方 Python/JavaScript SDK 中调用 DeepInfra 托管的开源模型。其核心价值在于用统一的 Hugging Face 路由与计费入口接入低门槛、低成本的 serverless 推理能力，支持当前的对话与文本生成任务，并为后续扩展到图像、视频和向量嵌入等能力铺路。",
   "score": 7,
   "tags": [
     "llm",
-    "deployment",
-    "evaluation"
+    "deployment"
   ],
   "audience": "intermediate",
   "status": "review",
-  "updated_at": "2026-05-03T04:00:43.937024+00:00"
+  "updated_at": "2026-05-03T09:22:12.710922+00:00"
 }

@@ -1,18 +1,20 @@
 {
   "id": "rss-20260503-010",
-  "title": "Unsupervised Electrofacies Classification and Porosity Characterization in the Offshore Keta Basin Using Wireline Logs",
-  "source": "rss:arXiv cs.AI",
-  "source_url": "https://arxiv.org/abs/2604.27126",
-  "author": "arXiv cs.AI",
-  "published_at": "2026-05-03T03:56:10.070775+00:00",
-  "collected_at": "2026-05-03T03:56:10.070775+00:00",
-  "summary": "该工作聚焦海上 Keta 盆地的测井数据分析，利用无监督学习对 electrofacies 进行分类，并进一步表征储层孔隙度分布。其价值在于将 AI 聚类方法应用到地球科学解释流程中，帮助在缺少人工标注的情况下提升岩相识别与储层评价效率，但从标题看更偏行业应用而非通用 AI 方法创新。",
+  "title": "DeepSeek-V4: a million-token context that agents can actually use",
+  "source": "rss:Hugging Face Blog",
+  "source_url": "https://huggingface.co/blog/deepseekv4",
+  "author": "Hugging Face Blog",
+  "published_at": "2026-05-03T09:14:21.014283+00:00",
+  "collected_at": "2026-05-03T09:14:21.014283+00:00",
+  "summary": "这篇内容聚焦 DeepSeek-V4 提供可达百万 token 的超长上下文能力，并强调这种上下文窗口不仅是参数层面的扩展，而是真正适合 Agent 场景中的多轮规划、工具调用和长链路任务执行。其价值在于提升复杂工作流中的跨步骤记忆与上下文保真度，减少上下文截断带来的能力损失，对构建实用型智能代理和长程推理系统具有较强参考意义。",
   "score": 7,
   "tags": [
-    "evaluation",
+    "agent",
+    "llm",
+    "tool-use",
     "reasoning"
   ],
   "audience": "intermediate",
   "status": "review",
-  "updated_at": "2026-05-03T04:00:43.937035+00:00"
+  "updated_at": "2026-05-03T09:22:12.710928+00:00"
 }

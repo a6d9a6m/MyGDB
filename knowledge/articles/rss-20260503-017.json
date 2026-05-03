@@ -1,19 +1,20 @@
 {
   "id": "rss-20260503-017",
-  "title": "Toward Personalized Digital Twins for Cognitive Decline Assessment: A Multimodal, Uncertainty-Aware Framework",
-  "source": "rss:arXiv cs.AI",
-  "source_url": "https://arxiv.org/abs/2604.27217",
-  "author": "arXiv cs.AI",
-  "published_at": "2026-05-03T03:56:10.070811+00:00",
-  "collected_at": "2026-05-03T03:56:10.070811+00:00",
-  "summary": "该工作从标题看，提出了一种面向认知衰退评估的个性化数字孪生框架，强调结合多模态信号来建模个体状态，并通过不确定性感知机制提升评估可靠性。其潜在价值在于把 AI 感知、个体化建模与临床风险判断结合起来，为更早期、更连续的认知健康监测提供技术路径。若方法和实验设计充分，这类框架对医疗 AI 评估场景具有一定研究意义。",
+  "title": "Inside VAKRA: Reasoning, Tool Use, and Failure Modes of Agents",
+  "source": "rss:Hugging Face Blog",
+  "source_url": "https://huggingface.co/blog/ibm-research/vakra-benchmark-analysis",
+  "author": "Hugging Face Blog",
+  "published_at": "2026-05-03T09:14:21.014307+00:00",
+  "collected_at": "2026-05-03T09:14:21.014307+00:00",
+  "summary": "这篇内容预计围绕 VAKRA 这一代理系统展开，分析其在推理链路、工具调用机制以及真实运行中的失败模式，重点讨论 agent 在复杂任务中的行为特征与局限。其价值在于帮助开发者理解如何评估和改进具备 reasoning 与 tool-use 能力的 AI agents，尤其适用于构建更稳健的智能体系统。",
   "score": 7,
   "tags": [
-    "vision",
-    "audio",
+    "agent",
+    "reasoning",
+    "tool-use",
     "evaluation"
   ],
-  "audience": "advanced",
+  "audience": "intermediate",
   "status": "review",
-  "updated_at": "2026-05-03T04:00:43.937054+00:00"
+  "updated_at": "2026-05-03T09:22:12.710945+00:00"
 }
