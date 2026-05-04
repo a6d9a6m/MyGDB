@@ -1,0 +1,17 @@
+{
+  "id": "github-20260504-024",
+  "title": "mlflow/mlflow",
+  "source": "github",
+  "source_url": "https://github.com/mlflow/mlflow",
+  "author": "mlflow",
+  "published_at": "2026-05-04T09:21:20Z",
+  "collected_at": "2026-05-04T10:06:35.380599+00:00",
+  "summary": "The open source AI engineering platform for agents, LLMs, and ML models. MLflow enables teams of all sizes to debug, evaluate, monitor, and optimize production-quality AI applications while controllin",
+  "score": 5,
+  "tags": [
+    "llm"
+  ],
+  "audience": "intermediate",
+  "status": "draft",
+  "updated_at": "2026-05-04T10:06:42.165180+00:00"
+}
