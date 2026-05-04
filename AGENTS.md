@@ -117,7 +117,6 @@ knowledge/
 - 角色边界：`.codex/agents/*.toml`
 - 执行方法：`.codex/skills/*/SKILL.md`
 - 数据结构：`.codex/contracts/knowledge-base.md`
-- Hook 管理：`.codex/requirements.toml`
 - Python 包与入口配置：`pyproject.toml`
 
 如三者发生冲突，优先级为：
@@ -140,13 +139,8 @@ knowledge/
 - 运行 MCP 服务优先使用 `python -m MyGK_DB.mcp_knowledge_server` 或安装后的 `mygk-mcp-server`。
 - 包内模块必须使用相对导入或完整包路径导入，不再通过修改 `sys.path` 兼容外部脚本布局。
 - 各级包目录需要保留 `__init__.py`，只暴露稳定入口，避免在包初始化阶段执行采集、分析或写盘逻辑。
-- Codex hook 定义使用 `.codex/requirements.toml` 的内联 TOML 格式，不使用 `hooks.toml` 或独立 `hooks.json`。
-- `.codex/config.toml` 只保留普通项目配置；hook 开关与 hook 命令由 `.codex/requirements.toml` 统一管理。
 
 ## Agent 与模型调用约定
-
-- 本仓库只使用 Codex CLI 作为 agent 支持入口。
-- 不维护下载脚本中携带的 `model_client.py`、`create_provider`、`chat_with_retry`、`LLM_PROVIDER` 等多 provider 抽象。
 - 需要模型能力的脚本应调用 Codex CLI，例如 `codex exec`，或把任务交给 `.codex/agents/*.toml` 定义的角色执行。
 - 如需指定模型，使用 Codex CLI 的 `--model` 参数或仓库脚本中的 `CODEX_MODEL` 环境变量；本机 Codex 不在 PATH 时，用 `.env.local` 中的 `CODEX_BIN` 指向可执行文件。
 - CI/CD 的 Codex provider 默认为 `dogapi` 中转站，默认模型为 `gpt-5.4`；密钥使用 `CODEX_API_KEY`，不要提交真实值。

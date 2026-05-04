@@ -9,11 +9,13 @@ AI 知识库四步流水线：采集 → 分析 → 整理 → 保存
 from __future__ import annotations
 
 import argparse
+import importlib.util
 import json
 import logging
 import os
 import re
 import subprocess
+import sys
 import tempfile
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -29,12 +31,16 @@ from .rss import collect_rss  # noqa: F401 — 重导出供内部使用
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 RAW_DIR = PROJECT_ROOT / "knowledge" / "raw"
 ARTICLES_DIR = PROJECT_ROOT / "knowledge" / "articles"
+HOOKS_DIR = PROJECT_ROOT / ".codex" / "hooks"
+VALIDATE_HOOK = HOOKS_DIR / "validate_json.py"
+QUALITY_HOOK = HOOKS_DIR / "check_quality.py"
 
 load_dotenv(PROJECT_ROOT / ".env.local")
 load_dotenv(PROJECT_ROOT / ".env")
 if os.getenv("CODEX_API_KEY") and not os.getenv("OPENAI_API_KEY"):
     os.environ["OPENAI_API_KEY"] = os.environ["CODEX_API_KEY"]
 logger = logging.getLogger(__name__)
+_HOOK_MODULE_CACHE: dict[str, Any] = {}
 
 
 # ── Step 1: 采集（Collect） ──────────────────────────────────────────────
@@ -186,11 +192,6 @@ def analyze_with_codex_cli(prompt: str, model: str | None = None) -> dict[str, A
     该函数是流水线的分析执行适配层：负责把 prompt 交给 Codex CLI，
     并将最终回复解析为后续步骤可消费的 JSON 对象。
     """
-    codex_prompt = (
-        "你是 AI 知识库流水线中的 Analyzer。只返回一个 JSON 对象，不要包含 markdown、解释文字或代码块。\n"
-        "JSON 必须包含 summary、score、tags、audience 四个字段。\n\n"
-        f"{prompt}"
-    )
     codex_bin = os.getenv("CODEX_BIN", "codex")
     command = [
         codex_bin,
@@ -212,7 +213,7 @@ def analyze_with_codex_cli(prompt: str, model: str | None = None) -> dict[str, A
         command.extend(["--output-last-message", str(output_file), "-"])
         subprocess.run(
             command,
-            input=codex_prompt,
+            input=prompt,
             check=True,
             capture_output=True,
             text=True,
@@ -376,6 +377,136 @@ def step_save(items: list[dict[str, Any]], dry_run: bool = False) -> list[Path]:
     return saved_files
 
 
+def _load_hook_module(name: str, path: Path) -> Any:
+    """按需加载仓库内的 hook 模块，确保流水线和 Codex hook 共用同一套规则。"""
+    if name in _HOOK_MODULE_CACHE:
+        return _HOOK_MODULE_CACHE[name]
+
+    spec = importlib.util.spec_from_file_location(name, path)
+    if spec is None or spec.loader is None:
+        raise RuntimeError(f"无法加载 hook 模块: {path}")
+
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[name] = module
+    spec.loader.exec_module(module)
+    _HOOK_MODULE_CACHE[name] = module
+    return module
+
+
+def _run_hook_command(script_path: Path, filepaths: list[Path]) -> None:
+    """执行 hook 脚本，保留与 Codex CLI/CI 一致的可见输出。"""
+    if not filepaths:
+        return
+
+    command = [
+        os.getenv("PYTHON_BIN", os.sys.executable),
+        str(script_path),
+        *[str(path) for path in filepaths],
+    ]
+    subprocess.run(
+        command,
+        check=False,
+        cwd=PROJECT_ROOT,
+        text=True,
+        encoding="utf-8",
+    )
+
+
+def review_saved_articles(filepaths: list[Path]) -> tuple[list[Path], list[dict[str, Any]]]:
+    """
+    对当前批次文章执行结构校验和质量评估。
+
+    Returns:
+        passed_files: 通过审查的文件
+        rejected_items: 失败文件对应的文章数据，供后续补采替换
+    """
+    if not filepaths:
+        return [], []
+
+    validate_module = _load_hook_module("mygk_validate_json", VALIDATE_HOOK)
+    quality_module = _load_hook_module("mygk_check_quality", QUALITY_HOOK)
+
+    _run_hook_command(VALIDATE_HOOK, filepaths)
+    _run_hook_command(QUALITY_HOOK, filepaths)
+
+    passed_files: list[Path] = []
+    rejected_items: list[dict[str, Any]] = []
+
+    for filepath in filepaths:
+        try:
+            data = json.loads(filepath.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as exc:
+            logger.warning("文章 JSON 解析失败，加入重采队列: %s (%s)", filepath, exc)
+            rejected_items.append({"filepath": filepath, "reason": "invalid-json"})
+            continue
+
+        errors = validate_module.validate_article(data)
+        report = quality_module.evaluate_quality(str(filepath), data)
+        if errors or report.grade == "C":
+            logger.warning(
+                "文章未通过审查: %s | validate_errors=%s | quality_grade=%s",
+                filepath.name,
+                errors,
+                report.grade,
+            )
+            rejected_items.append({
+                "filepath": filepath,
+                "reason": "validation-or-quality-failed",
+                "data": data,
+                "validate_errors": errors,
+                "quality_grade": report.grade,
+                "quality_score": report.total_score,
+            })
+            continue
+
+        passed_files.append(filepath)
+
+    return passed_files, rejected_items
+
+
+def _remove_rejected_files(rejected_items: list[dict[str, Any]]) -> None:
+    """删除当前运行中新生成且未通过审查的 article 文件，避免污染知识库。"""
+    for item in rejected_items:
+        filepath = item.get("filepath")
+        if not isinstance(filepath, Path) or not filepath.exists():
+            continue
+        filepath.unlink()
+        logger.info("已移除未通过审查的文章: %s", filepath)
+
+
+def _repair_with_recollection(
+    *,
+    sources: list[str],
+    target_count: int,
+    attempt: int,
+    dry_run: bool,
+) -> tuple[list[Path], list[dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]]]:
+    """
+    对未达标条目执行补采。
+
+    返回值依次为：
+        replacement_files, raw_items, analyzed_items, organized_items
+    """
+    if target_count <= 0:
+        return [], [], [], []
+
+    repair_limit = max(target_count * (attempt + 2), target_count + 2)
+    print(f"\n[Repair] 第 {attempt} 次修正补采，目标补足 {target_count} 条，临时采集上限 {repair_limit}")
+
+    raw_items = step_collect(sources, repair_limit)
+    if not raw_items:
+        return [], [], [], []
+
+    analyzed_items = step_analyze(raw_items)
+    organized_items = step_organize(analyzed_items)
+    if not organized_items:
+        return [], raw_items, analyzed_items, organized_items
+
+    replacement_candidates = organized_items[:target_count]
+    replacement_files = step_save(replacement_candidates, dry_run=dry_run)
+    return replacement_files, raw_items, analyzed_items, organized_items
+
+
 # ── 主流程 ───────────────────────────────────────────────────────────────
 
 def run_pipeline(
@@ -383,6 +514,9 @@ def run_pipeline(
     limit: int = 20,
     dry_run: bool = False,
     steps: list[int] | None = None,
+    auto_review: bool = True,
+    repair_on_failure: bool = True,
+    max_review_attempts: int = 3,
 ) -> dict[str, Any]:
     """
     运行完整的四步流水线。
@@ -409,6 +543,9 @@ def run_pipeline(
     analyzed_items: list[dict] = []
     organized_items: list[dict] = []
     saved_files: list[str] = []
+    review_passed_files: list[Path] = []
+    review_failed = 0
+    repair_rounds = 0
 
     # Step 1: 采集
     if 1 in run_steps:
@@ -429,6 +566,45 @@ def run_pipeline(
     if 4 in run_steps and organized_items:
         saved_files = step_save(organized_items, dry_run=dry_run)
 
+    if 4 in run_steps and auto_review and not dry_run and saved_files:
+        print(f"\n{'='*60}")
+        print("[Review] 保存后自动触发审查")
+        print(f"{'='*60}")
+
+        current_files = list(saved_files)
+        review_passed_files, rejected_items = review_saved_articles(current_files)
+        review_failed = len(rejected_items)
+
+        attempt = 0
+        while rejected_items and repair_on_failure and attempt < max_review_attempts:
+            attempt += 1
+            repair_rounds = attempt
+            _remove_rejected_files(rejected_items)
+
+            replacement_files, repair_raw, repair_analyzed, repair_organized = _repair_with_recollection(
+                sources=sources,
+                target_count=len(rejected_items),
+                attempt=attempt,
+                dry_run=dry_run,
+            )
+            raw_items.extend(repair_raw)
+            analyzed_items.extend(repair_analyzed)
+            organized_items.extend(repair_organized)
+
+            if not replacement_files:
+                logger.warning("补采未生成可审查文章，停止自动修正。")
+                break
+
+            new_passed, rejected_items = review_saved_articles(replacement_files)
+            review_passed_files.extend(new_passed)
+            review_failed = len(rejected_items)
+
+        if rejected_items:
+            _remove_rejected_files(rejected_items)
+            logger.warning("仍有 %d 篇文章未通过审查，已从知识库移除。", len(rejected_items))
+
+        saved_files = [str(path) for path in review_passed_files]
+
     # 统计
     elapsed = (datetime.now() - start_time).total_seconds()
     stats = {
@@ -436,6 +612,9 @@ def run_pipeline(
         "analyzed": len(analyzed_items),
         "organized": len(organized_items),
         "saved": len(saved_files),
+        "review_passed": len(review_passed_files) if auto_review and not dry_run else len(saved_files),
+        "review_failed": review_failed,
+        "repair_rounds": repair_rounds,
         "elapsed_seconds": round(elapsed, 1),
         "dry_run": dry_run,
     }
@@ -444,6 +623,8 @@ def run_pipeline(
     print(f"# 流水线完成！耗时 {elapsed:.1f} 秒")
     print(f"# 采集: {stats['collected']} → 分析: {stats['analyzed']} "
           f"→ 整理: {stats['organized']} → 保存: {stats['saved']}")
+    if auto_review and not dry_run:
+        print(f"# 审查通过: {stats['review_passed']} | 审查失败: {stats['review_failed']} | 修正轮次: {stats['repair_rounds']}")
     print(f"{'#'*60}\n")
 
     return stats
@@ -496,6 +677,22 @@ def main() -> None:
         default=None,
         help="Codex CLI 使用的模型名，覆盖环境变量 CODEX_MODEL",
     )
+    parser.add_argument(
+        "--skip-review",
+        action="store_true",
+        help="跳过保存后的自动审查与补采修正",
+    )
+    parser.add_argument(
+        "--skip-repair",
+        action="store_true",
+        help="执行自动审查，但不做失败后的补采修正",
+    )
+    parser.add_argument(
+        "--max-review-attempts",
+        type=int,
+        default=3,
+        help="审查失败后的最大自动补采轮次（默认: 3）",
+    )
 
     args = parser.parse_args()
 
@@ -514,6 +711,9 @@ def main() -> None:
         limit=args.limit,
         dry_run=args.dry_run,
         steps=args.step,
+        auto_review=not args.skip_review,
+        repair_on_failure=not args.skip_repair,
+        max_review_attempts=max(0, args.max_review_attempts),
     )
 
 

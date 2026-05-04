@@ -10,8 +10,6 @@ echo ""
 while true; do
     echo ">>> $(date '+%H:%M:%S') 开始采集..."
     python -m MyGK_DB.pipeline.pipeline --sources github --limit 5
-    python .codex/hooks/validate_json.py knowledge/articles/*.json 2>/dev/null
-    python .codex/hooks/check_quality.py knowledge/articles/*.json 2>/dev/null
     echo ""
     echo "--- 下次采集: $(date -d "+${INTERVAL} min" '+%H:%M:%S' 2>/dev/null || date -v+${INTERVAL}M '+%H:%M:%S') ---"
     echo ""

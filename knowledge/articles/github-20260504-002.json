@@ -1,0 +1,19 @@
+{
+  "id": "github-20260504-002",
+  "title": "langchain-ai/langchain",
+  "source": "github",
+  "source_url": "https://github.com/langchain-ai/langchain",
+  "author": "langchain-ai",
+  "published_at": "2026-05-03T18:54:52Z",
+  "collected_at": "2026-05-04T03:41:12.972869+00:00",
+  "summary": "LangChain 是一个面向 LLM 应用与 Agent 系统开发的工程平台，提供围绕链式调用、工具接入、检索增强和工作流编排的基础能力。该项目同时支持 TypeScript，降低了在 Web 应用和服务端场景中构建 Agent 的门槛。对于希望快速搭建生产级 LLM 应用的开发者来说，它的价值在于提供较完整的工程抽象与生态集成。",
+  "score": 8,
+  "tags": [
+    "agent",
+    "llm",
+    "tool-use"
+  ],
+  "audience": "intermediate",
+  "status": "review",
+  "updated_at": "2026-05-04T03:41:56.025751+00:00"
+}

@@ -50,6 +50,9 @@ jobs:
           mkdir -p "$HOME/.codex"
           cp -R .codex/. "$HOME/.codex/"
           cat > "$HOME/.codex/config.toml" <<EOF
+          [features]
+          memories = true
+
           model_provider = "${CODEX_MODEL_PROVIDER}"
           model = "${CODEX_MODEL}"
           model_reasoning_effort = "${CODEX_MODEL_REASONING_EFFORT}"
@@ -64,11 +67,19 @@ jobs:
 
       - name: Run collection pipeline
         run: |
-          python -m MyGK_DB.pipeline.pipeline \
+          mygk-pipeline \
             --sources github,rss \
             --limit 20 \
             --model "${CODEX_MODEL}" \
             --verbose
+
+      - name: Validate generated article JSON
+        run: |
+          python .codex/hooks/validate_json.py knowledge/articles
+
+      - name: Check generated article quality
+        run: |
+          python .codex/hooks/check_quality.py knowledge/articles
 
       - name: Commit and push results
         run: |
