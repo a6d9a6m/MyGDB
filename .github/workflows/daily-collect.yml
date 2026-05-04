@@ -48,6 +48,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.CODEX_API_KEY }}
         run: |
           mkdir -p "$HOME/.codex"
+          cp -R .codex/. "$HOME/.codex/"
           cat > "$HOME/.codex/config.toml" <<EOF
           model_provider = "${CODEX_MODEL_PROVIDER}"
           model = "${CODEX_MODEL}"
@@ -59,34 +60,6 @@ jobs:
           wire_api = "responses"
           requires_openai_auth = true
           supports_websockets = false
-          EOF
-
-      - name: Configure Codex hooks
-        run: |
-          cat > "$HOME/.codex/hooks.json" <<'EOF'
-          {
-            "hooks": {
-              "PostToolUse": [
-                {
-                  "matcher": "Bash|shell_command",
-                  "hooks": [
-                    {
-                      "type": "command",
-                      "command": "python .codex/hooks/validate_json.py knowledge/articles",
-                      "timeout": 30,
-                      "statusMessage": "Validating knowledge article JSON"
-                    },
-                    {
-                      "type": "command",
-                      "command": "python .codex/hooks/check_quality.py knowledge/articles",
-                      "timeout": 30,
-                      "statusMessage": "Checking knowledge article quality"
-                    }
-                  ]
-                }
-              ]
-            }
-          }
           EOF
 
       - name: Run collection pipeline

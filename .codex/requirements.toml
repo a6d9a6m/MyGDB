@@ -1,8 +1,11 @@
 [features]
 codex_hooks = true
 
+[hooks]
+managed_dir = "/.codex/hooks"
+
 [[hooks.PostToolUse]]
-matcher = "^Bash$"
+matcher = "Bash|shell_command"
 
 [[hooks.PostToolUse.hooks]]
 type = "command"
