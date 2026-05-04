@@ -1,0 +1,19 @@
+{
+  "id": "github-20260503-003",
+  "title": "NousResearch/hermes-agent",
+  "source": "github",
+  "source_url": "https://github.com/NousResearch/hermes-agent",
+  "author": "NousResearch",
+  "published_at": "2026-05-02T10:38:03Z",
+  "collected_at": "2026-05-03T03:56:07.219341+00:00",
+  "summary": "这是 NousResearch 提供的一个以“随你一起成长”为定位的 Agent 项目，重点在于为开发者提供可扩展、可持续演进的智能体框架。结合仓库命名和描述判断，它更偏向围绕 LLM 驱动的任务执行、能力扩展与工具接入，适合作为构建个人或团队智能体系统的基础组件。",
+  "score": 7,
+  "tags": [
+    "agent",
+    "llm",
+    "tool-use"
+  ],
+  "audience": "intermediate",
+  "status": "review",
+  "updated_at": "2026-05-03T04:00:43.936951+00:00"
+}

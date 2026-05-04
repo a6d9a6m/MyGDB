@@ -1,0 +1,18 @@
+{
+  "id": "rss-20260503-003",
+  "title": "Spotify adds 'Verified' badges to distinguish human artists from AI",
+  "source": "rss:Hacker News (Best)",
+  "source_url": "https://www.bbc.com/news/articles/c5yerr4m1yno",
+  "author": "Hacker News (Best)",
+  "published_at": "2026-05-03T03:56:08.555114+00:00",
+  "collected_at": "2026-05-03T03:56:08.555114+00:00",
+  "summary": "这则内容聚焦于 Spotify 为真人艺术家增加“Verified”标识，用来区分真人创作者与 AI 生成音乐账号，反映出音频平台正在建立面向生成式 AI 的身份与内容治理机制。它的技术价值不在模型创新本身，而在于音频生态中关于 AI 内容识别、可信信号设计和平台分发规则的产品化实践，对关注 AI 音频应用落地与治理的人有参考意义。",
+  "score": 6,
+  "tags": [
+    "audio",
+    "deployment"
+  ],
+  "audience": "intermediate",
+  "status": "review",
+  "updated_at": "2026-05-03T04:00:43.937012+00:00"
+}

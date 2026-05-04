@@ -1,0 +1,20 @@
+{
+  "id": "rss-20260503-008",
+  "title": "Introducing NVIDIA Nemotron 3 Nano Omni: Long-Context Multimodal Intelligence for Documents, Audio and Video Agents",
+  "source": "rss:Hugging Face Blog",
+  "source_url": "https://huggingface.co/blog/nvidia/nemotron-3-nano-omni-multimodal-intelligence",
+  "author": "Hugging Face Blog",
+  "published_at": "2026-05-03T09:14:21.014271+00:00",
+  "collected_at": "2026-05-03T09:14:21.014271+00:00",
+  "summary": "该内容介绍了 NVIDIA 推出的 Nemotron 3 Nano Omni，多模态长上下文模型面向文档、音频和视频代理场景，强调在单一模型中统一处理多种输入模态的能力。其价值在于为企业级智能体提供更强的跨模态理解与长文档处理基础，适合用于检索增强、内容分析和复杂工作流自动化。",
+  "score": 7,
+  "tags": [
+    "llm",
+    "vision",
+    "audio",
+    "agent"
+  ],
+  "audience": "intermediate",
+  "status": "review",
+  "updated_at": "2026-05-03T09:22:12.710924+00:00"
+}

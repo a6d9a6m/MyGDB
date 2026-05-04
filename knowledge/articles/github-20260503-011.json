@@ -1,0 +1,20 @@
+{
+  "id": "github-20260503-011",
+  "title": "CherryHQ/cherry-studio",
+  "source": "github",
+  "source_url": "https://github.com/CherryHQ/cherry-studio",
+  "author": "CherryHQ",
+  "published_at": "2026-05-03T03:21:57Z",
+  "collected_at": "2026-05-03T03:56:07.219394+00:00",
+  "summary": "Cherry Studio 是一个面向 AI 生产力场景的统一工作台，集成智能对话、自主 Agent 与 300+ 助手能力，并提供对多种前沿大模型的统一接入。它的价值在于把多模型调用、任务协作和助手编排放到同一界面中，降低个人与团队使用 LLM 和 Agent 工作流的门槛。",
+  "score": 7,
+  "tags": [
+    "agent",
+    "llm",
+    "multi-agent",
+    "tool-use"
+  ],
+  "audience": "intermediate",
+  "status": "review",
+  "updated_at": "2026-05-03T04:00:43.936977+00:00"
+}

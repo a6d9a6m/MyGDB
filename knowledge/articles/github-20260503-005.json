@@ -1,0 +1,19 @@
+{
+  "id": "github-20260503-005",
+  "title": "browser-use/browser-use",
+  "source": "github",
+  "source_url": "https://github.com/browser-use/browser-use",
+  "author": "browser-use",
+  "published_at": "2026-05-03T02:02:20Z",
+  "collected_at": "2026-05-03T03:56:07.219355+00:00",
+  "summary": "browser-use 是一个面向 AI agent 的开源浏览器自动化项目，目标是把网站操作能力封装为模型可调用的执行层，让 agent 能更稳定地完成点击、输入、导航和在线任务编排。它的价值在于降低构建网页操作型 agent 的工程复杂度，适合用于浏览器任务自动化、工具调用链路集成以及通用 Web agent 原型开发。",
+  "score": 7,
+  "tags": [
+    "agent",
+    "tool-use",
+    "llm"
+  ],
+  "audience": "intermediate",
+  "status": "review",
+  "updated_at": "2026-05-03T04:00:43.936958+00:00"
+}

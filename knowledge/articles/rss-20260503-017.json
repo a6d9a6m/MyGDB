@@ -1,0 +1,20 @@
+{
+  "id": "rss-20260503-017",
+  "title": "Inside VAKRA: Reasoning, Tool Use, and Failure Modes of Agents",
+  "source": "rss:Hugging Face Blog",
+  "source_url": "https://huggingface.co/blog/ibm-research/vakra-benchmark-analysis",
+  "author": "Hugging Face Blog",
+  "published_at": "2026-05-03T09:14:21.014307+00:00",
+  "collected_at": "2026-05-03T09:14:21.014307+00:00",
+  "summary": "这篇内容预计围绕 VAKRA 这一代理系统展开，分析其在推理链路、工具调用机制以及真实运行中的失败模式，重点讨论 agent 在复杂任务中的行为特征与局限。其价值在于帮助开发者理解如何评估和改进具备 reasoning 与 tool-use 能力的 AI agents，尤其适用于构建更稳健的智能体系统。",
+  "score": 7,
+  "tags": [
+    "agent",
+    "reasoning",
+    "tool-use",
+    "evaluation"
+  ],
+  "audience": "intermediate",
+  "status": "review",
+  "updated_at": "2026-05-03T09:22:12.710945+00:00"
+}
