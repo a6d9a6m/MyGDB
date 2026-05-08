@@ -1,0 +1,17 @@
+{
+  "id": "github-20260508-011",
+  "title": "earendil-works/pi",
+  "source": "github",
+  "source_url": "https://github.com/earendil-works/pi",
+  "author": "earendil-works",
+  "published_at": "2026-05-07T22:56:19Z",
+  "collected_at": "2026-05-08T09:06:36.559283+00:00",
+  "summary": "AI agent toolkit: coding agent CLI, unified LLM API, TUI & web UI libraries, Slack bot, vLLM pods",
+  "score": 5,
+  "tags": [
+    "llm"
+  ],
+  "audience": "intermediate",
+  "status": "draft",
+  "updated_at": "2026-05-08T09:06:40.071577+00:00"
+}
