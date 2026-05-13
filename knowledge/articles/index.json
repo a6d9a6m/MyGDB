@@ -1,0 +1,678 @@
+{
+  "last_updated": "2026-05-13T09:41:26Z",
+  "total_count": 56,
+  "entries": [
+    {
+      "id": "kb-2026-05-08-011",
+      "title": "earendil-works/pi",
+      "file": "2026-05-08-earendil-works-pi.json",
+      "tags": [
+        "llm",
+        "ai"
+      ],
+      "relevance_score": 0.5,
+      "organized_at": "2026-05-08T09:06:40Z"
+    },
+    {
+      "id": "kb-2026-05-06-006",
+      "title": "infiniflow/ragflow",
+      "file": "2026-05-06-infiniflow-ragflow.json",
+      "tags": [
+        "llm",
+        "ai"
+      ],
+      "relevance_score": 0.5,
+      "organized_at": "2026-05-06T10:09:59Z"
+    },
+    {
+      "id": "kb-2026-05-06-017",
+      "title": "patchy631/ai-engineering-hub",
+      "file": "2026-05-06-patchy631-ai-engineering-hub.json",
+      "tags": [
+        "llm",
+        "ai"
+      ],
+      "relevance_score": 0.5,
+      "organized_at": "2026-05-06T10:09:59Z"
+    },
+    {
+      "id": "kb-2026-05-05-027",
+      "title": "iOfficeAI/AionUi",
+      "file": "2026-05-05-iofficeai-aionui.json",
+      "tags": [
+        "llm",
+        "ai"
+      ],
+      "relevance_score": 0.5,
+      "organized_at": "2026-05-05T09:54:06Z"
+    },
+    {
+      "id": "kb-2026-05-04-021",
+      "title": "ComposioHQ/composio",
+      "file": "2026-05-04-composiohq-composio.json",
+      "tags": [
+        "llm",
+        "ai"
+      ],
+      "relevance_score": 0.5,
+      "organized_at": "2026-05-04T10:06:42Z"
+    },
+    {
+      "id": "kb-2026-05-04-025",
+      "title": "deepset-ai/haystack",
+      "file": "2026-05-04-deepset-ai-haystack.json",
+      "tags": [
+        "llm",
+        "ai"
+      ],
+      "relevance_score": 0.5,
+      "organized_at": "2026-05-04T10:06:42Z"
+    },
+    {
+      "id": "kb-2026-05-04-030",
+      "title": "google/adk-python",
+      "file": "2026-05-04-google-adk-python.json",
+      "tags": [
+        "llm",
+        "ai"
+      ],
+      "relevance_score": 0.5,
+      "organized_at": "2026-05-04T10:06:42Z"
+    },
+    {
+      "id": "kb-2026-05-04-022",
+      "title": "labring/FastGPT",
+      "file": "2026-05-04-labring-fastgpt.json",
+      "tags": [
+        "llm",
+        "ai"
+      ],
+      "relevance_score": 0.5,
+      "organized_at": "2026-05-04T10:06:42Z"
+    },
+    {
+      "id": "kb-2026-05-04-027",
+      "title": "mastra-ai/mastra",
+      "file": "2026-05-04-mastra-ai-mastra.json",
+      "tags": [
+        "llm",
+        "ai"
+      ],
+      "relevance_score": 0.5,
+      "organized_at": "2026-05-04T10:06:42Z"
+    },
+    {
+      "id": "kb-2026-05-04-024",
+      "title": "mlflow/mlflow",
+      "file": "2026-05-04-mlflow-mlflow.json",
+      "tags": [
+        "llm",
+        "ai"
+      ],
+      "relevance_score": 0.5,
+      "organized_at": "2026-05-04T10:06:42Z"
+    },
+    {
+      "id": "kb-2026-05-04-023",
+      "title": "openai/openai-agents-python",
+      "file": "2026-05-04-openai-openai-agents-python.json",
+      "tags": [
+        "llm",
+        "ai"
+      ],
+      "relevance_score": 0.5,
+      "organized_at": "2026-05-04T10:06:42Z"
+    },
+    {
+      "id": "kb-2026-05-04-029",
+      "title": "promptfoo/promptfoo",
+      "file": "2026-05-04-promptfoo-promptfoo.json",
+      "tags": [
+        "llm",
+        "ai"
+      ],
+      "relevance_score": 0.5,
+      "organized_at": "2026-05-04T10:06:42Z"
+    },
+    {
+      "id": "kb-2026-05-04-026",
+      "title": "vercel/ai",
+      "file": "2026-05-04-vercel-ai.json",
+      "tags": [
+        "llm",
+        "ai"
+      ],
+      "relevance_score": 0.5,
+      "organized_at": "2026-05-04T10:06:42Z"
+    },
+    {
+      "id": "kb-2026-05-04-028",
+      "title": "volcengine/OpenViking",
+      "file": "2026-05-04-volcengine-openviking.json",
+      "tags": [
+        "llm",
+        "ai"
+      ],
+      "relevance_score": 0.5,
+      "organized_at": "2026-05-04T10:06:42Z"
+    },
+    {
+      "id": "kb-2026-05-04-002",
+      "title": "langchain-ai/langchain",
+      "file": "2026-05-04-langchain-ai-langchain.json",
+      "tags": [
+        "agent",
+        "llm",
+        "tool-use"
+      ],
+      "relevance_score": 0.8,
+      "organized_at": "2026-05-04T03:41:56Z"
+    },
+    {
+      "id": "kb-2026-05-04-001",
+      "title": "langgenius/dify",
+      "file": "2026-05-04-langgenius-dify.json",
+      "tags": [
+        "agent",
+        "llm",
+        "deployment",
+        "tool-use"
+      ],
+      "relevance_score": 0.8,
+      "organized_at": "2026-05-04T03:40:22Z"
+    },
+    {
+      "id": "kb-2026-05-03-033",
+      "title": "AI and the Future of Cybersecurity: Why Openness Matters",
+      "file": "2026-05-03-ai-and-the-future-of-cybersecurity-why-openness-matters.json",
+      "tags": [
+        "security",
+        "llm",
+        "evaluation"
+      ],
+      "relevance_score": 0.7,
+      "organized_at": "2026-05-03T09:22:12Z"
+    },
+    {
+      "id": "kb-2026-05-03-025",
+      "title": "AI evals are becoming the new compute bottleneck",
+      "file": "2026-05-03-ai-evals-are-becoming-the-new-compute-bottleneck.json",
+      "tags": [
+        "evaluation",
+        "llm",
+        "reasoning"
+      ],
+      "relevance_score": 0.7,
+      "organized_at": "2026-05-03T09:22:12Z"
+    },
+    {
+      "id": "kb-2026-05-03-027",
+      "title": "DeepInfra on Hugging Face Inference Providers 🔥",
+      "file": "2026-05-03-deepinfra-on-hugging-face-inference-providers.json",
+      "tags": [
+        "llm",
+        "deployment"
+      ],
+      "relevance_score": 0.7,
+      "organized_at": "2026-05-03T09:22:12Z"
+    },
+    {
+      "id": "kb-2026-05-03-030",
+      "title": "DeepSeek-V4: a million-token context that agents can actually use",
+      "file": "2026-05-03-deepseek-v4-a-million-token-context-that-agents-can-actually-use.json",
+      "tags": [
+        "agent",
+        "llm",
+        "tool-use",
+        "reasoning"
+      ],
+      "relevance_score": 0.7,
+      "organized_at": "2026-05-03T09:22:12Z"
+    },
+    {
+      "id": "kb-2026-05-03-034",
+      "title": "Ecom-RLVE: Adaptive Verifiable Environments for E-Commerce Conversational Agents",
+      "file": "2026-05-03-ecom-rlve-adaptive-verifiable-environments-for-e-commerce-conversational-agents.json",
+      "tags": [
+        "agent",
+        "evaluation",
+        "tool-use"
+      ],
+      "relevance_score": 0.7,
+      "organized_at": "2026-05-03T09:22:12Z"
+    },
+    {
+      "id": "kb-2026-05-03-026",
+      "title": "Granite 4.1 LLMs: How They’re Built",
+      "file": "2026-05-03-granite-4-1-llms-how-they-re-built.json",
+      "tags": [
+        "llm",
+        "reasoning",
+        "fine-tuning"
+      ],
+      "relevance_score": 0.7,
+      "organized_at": "2026-05-03T09:22:12Z"
+    },
+    {
+      "id": "kb-2026-05-03-029",
+      "title": "How to build scalable web apps with OpenAI&apos;s Privacy Filter",
+      "file": "2026-05-03-how-to-build-scalable-web-apps-with-openai-apos-s-privacy-filter.json",
+      "tags": [
+        "security",
+        "deployment",
+        "llm"
+      ],
+      "relevance_score": 0.7,
+      "organized_at": "2026-05-03T09:22:12Z"
+    },
+    {
+      "id": "kb-2026-05-03-031",
+      "title": "How to Use Transformers.js in a Chrome Extension",
+      "file": "2026-05-03-how-to-use-transformers-js-in-a-chrome-extension.json",
+      "tags": [
+        "llm",
+        "deployment"
+      ],
+      "relevance_score": 0.7,
+      "organized_at": "2026-05-03T09:22:12Z"
+    },
+    {
+      "id": "kb-2026-05-03-037",
+      "title": "Inside VAKRA: Reasoning, Tool Use, and Failure Modes of Agents",
+      "file": "2026-05-03-inside-vakra-reasoning-tool-use-and-failure-modes-of-agents.json",
+      "tags": [
+        "agent",
+        "reasoning",
+        "tool-use",
+        "evaluation"
+      ],
+      "relevance_score": 0.7,
+      "organized_at": "2026-05-03T09:22:12Z"
+    },
+    {
+      "id": "kb-2026-05-03-028",
+      "title": "Introducing NVIDIA Nemotron 3 Nano Omni: Long-Context Multimodal Intelligence for Documents, Audio and Video Agents",
+      "file": "2026-05-03-introducing-nvidia-nemotron-3-nano-omni-long-context-multimodal-intelligence-for.json",
+      "tags": [
+        "llm",
+        "vision",
+        "audio",
+        "agent"
+      ],
+      "relevance_score": 0.7,
+      "organized_at": "2026-05-03T09:22:12Z"
+    },
+    {
+      "id": "kb-2026-05-03-038",
+      "title": "Meet HoloTab by HCompany. Your AI browser companion.",
+      "file": "2026-05-03-meet-holotab-by-hcompany-your-ai-browser-companion.json",
+      "tags": [
+        "agent",
+        "llm",
+        "tool-use"
+      ],
+      "relevance_score": 0.6,
+      "organized_at": "2026-05-03T09:22:12Z"
+    },
+    {
+      "id": "kb-2026-05-03-040",
+      "title": "Multimodal Embedding &amp; Reranker Models with Sentence Transformers",
+      "file": "2026-05-03-multimodal-embedding-amp-reranker-models-with-sentence-transformers.json",
+      "tags": [
+        "vision",
+        "rag",
+        "evaluation"
+      ],
+      "relevance_score": 0.7,
+      "organized_at": "2026-05-03T09:22:12Z"
+    },
+    {
+      "id": "kb-2026-05-03-032",
+      "title": "QIMMA قِمّة ⛰: A Quality-First Arabic LLM Leaderboard",
+      "file": "2026-05-03-qimma-a-quality-first-arabic-llm-leaderboard.json",
+      "tags": [
+        "llm",
+        "evaluation"
+      ],
+      "relevance_score": 0.7,
+      "organized_at": "2026-05-03T09:22:12Z"
+    },
+    {
+      "id": "kb-2026-05-03-035",
+      "title": "The PR you would have opened yourself",
+      "file": "2026-05-03-the-pr-you-would-have-opened-yourself.json",
+      "tags": [
+        "agent",
+        "code-generation",
+        "tool-use"
+      ],
+      "relevance_score": 0.7,
+      "organized_at": "2026-05-03T09:22:12Z"
+    },
+    {
+      "id": "kb-2026-05-03-036",
+      "title": "Training and Finetuning Multimodal Embedding &amp; Reranker Models with Sentence Transformers",
+      "file": "2026-05-03-training-and-finetuning-multimodal-embedding-amp-reranker-models-with-sentence-t.json",
+      "tags": [
+        "fine-tuning",
+        "rag",
+        "vision",
+        "evaluation"
+      ],
+      "relevance_score": 0.7,
+      "organized_at": "2026-05-03T09:22:12Z"
+    },
+    {
+      "id": "kb-2026-05-03-039",
+      "title": "Waypoint-1.5: Higher-Fidelity Interactive Worlds for Everyday GPUs",
+      "file": "2026-05-03-waypoint-1-5-higher-fidelity-interactive-worlds-for-everyday-gpus.json",
+      "tags": [
+        "vision",
+        "llm"
+      ],
+      "relevance_score": 0.7,
+      "organized_at": "2026-05-03T09:22:12Z"
+    },
+    {
+      "id": "kb-2026-05-03-014",
+      "title": "aaif-goose/goose",
+      "file": "2026-05-03-aaif-goose-goose.json",
+      "tags": [
+        "agent",
+        "llm",
+        "tool-use",
+        "code-generation"
+      ],
+      "relevance_score": 0.8,
+      "organized_at": "2026-05-03T04:00:43Z"
+    },
+    {
+      "id": "kb-2026-05-03-021",
+      "title": "AI Self-preferencing in Algorithmic Hiring: Empirical Evidence and Insights",
+      "file": "2026-05-03-ai-self-preferencing-in-algorithmic-hiring-empirical-evidence-and-insights.json",
+      "tags": [
+        "evaluation",
+        "security"
+      ],
+      "relevance_score": 0.6,
+      "organized_at": "2026-05-03T04:00:43Z"
+    },
+    {
+      "id": "kb-2026-05-03-022",
+      "title": "AI uses less water than the public thinks",
+      "file": "2026-05-03-ai-uses-less-water-than-the-public-thinks.json",
+      "tags": [
+        "llm",
+        "deployment"
+      ],
+      "relevance_score": 0.6,
+      "organized_at": "2026-05-03T04:00:43Z"
+    },
+    {
+      "id": "kb-2026-05-03-018",
+      "title": "AstrBotDevs/AstrBot",
+      "file": "2026-05-03-astrbotdevs-astrbot.json",
+      "tags": [
+        "agent",
+        "llm",
+        "tool-use"
+      ],
+      "relevance_score": 0.7,
+      "organized_at": "2026-05-03T04:00:43Z"
+    },
+    {
+      "id": "kb-2026-05-03-013",
+      "title": "badlogic/pi-mono",
+      "file": "2026-05-03-badlogic-pi-mono.json",
+      "tags": [
+        "agent",
+        "llm",
+        "tool-use",
+        "deployment",
+        "code-generation"
+      ],
+      "relevance_score": 0.7,
+      "organized_at": "2026-05-03T04:00:43Z"
+    },
+    {
+      "id": "kb-2026-05-03-005",
+      "title": "browser-use/browser-use",
+      "file": "2026-05-03-browser-use-browser-use.json",
+      "tags": [
+        "agent",
+        "tool-use",
+        "llm"
+      ],
+      "relevance_score": 0.7,
+      "organized_at": "2026-05-03T04:00:43Z"
+    },
+    {
+      "id": "kb-2026-05-03-008",
+      "title": "bytedance/deer-flow",
+      "file": "2026-05-03-bytedance-deer-flow.json",
+      "tags": [
+        "agent",
+        "multi-agent",
+        "tool-use",
+        "code-generation",
+        "reasoning"
+      ],
+      "relevance_score": 0.8,
+      "organized_at": "2026-05-03T04:00:43Z"
+    },
+    {
+      "id": "kb-2026-05-03-011",
+      "title": "CherryHQ/cherry-studio",
+      "file": "2026-05-03-cherryhq-cherry-studio.json",
+      "tags": [
+        "agent",
+        "llm",
+        "multi-agent",
+        "tool-use"
+      ],
+      "relevance_score": 0.7,
+      "organized_at": "2026-05-03T04:00:43Z"
+    },
+    {
+      "id": "kb-2026-05-03-017",
+      "title": "continuedev/continue",
+      "file": "2026-05-03-continuedev-continue.json",
+      "tags": [
+        "llm",
+        "evaluation",
+        "deployment",
+        "code-generation"
+      ],
+      "relevance_score": 0.7,
+      "organized_at": "2026-05-03T04:00:43Z"
+    },
+    {
+      "id": "kb-2026-05-03-020",
+      "title": "CopilotKit/CopilotKit",
+      "file": "2026-05-03-copilotkit-copilotkit.json",
+      "tags": [
+        "agent",
+        "tool-use",
+        "llm"
+      ],
+      "relevance_score": 0.7,
+      "organized_at": "2026-05-03T04:00:43Z"
+    },
+    {
+      "id": "kb-2026-05-03-007",
+      "title": "hiyouga/LlamaFactory",
+      "file": "2026-05-03-hiyouga-llamafactory.json",
+      "tags": [
+        "llm",
+        "fine-tuning",
+        "vision"
+      ],
+      "relevance_score": 0.8,
+      "organized_at": "2026-05-03T04:00:43Z"
+    },
+    {
+      "id": "kb-2026-05-03-015",
+      "title": "HKUDS/nanobot",
+      "file": "2026-05-03-hkuds-nanobot.json",
+      "tags": [
+        "agent",
+        "tool-use",
+        "llm"
+      ],
+      "relevance_score": 0.7,
+      "organized_at": "2026-05-03T04:00:43Z"
+    },
+    {
+      "id": "kb-2026-05-03-010",
+      "title": "jeecgboot/JeecgBoot",
+      "file": "2026-05-03-jeecgboot-jeecgboot.json",
+      "tags": [
+        "mcp",
+        "llm",
+        "code-generation",
+        "tool-use"
+      ],
+      "relevance_score": 0.7,
+      "organized_at": "2026-05-03T04:00:43Z"
+    },
+    {
+      "id": "kb-2026-05-03-002",
+      "title": "langchain-ai/langchain",
+      "file": "2026-05-03-langchain-ai-langchain.json",
+      "tags": [
+        "agent",
+        "llm",
+        "tool-use",
+        "multi-agent"
+      ],
+      "relevance_score": 0.8,
+      "organized_at": "2026-05-03T04:00:43Z"
+    },
+    {
+      "id": "kb-2026-05-03-019",
+      "title": "langchain-ai/langgraph",
+      "file": "2026-05-03-langchain-ai-langgraph.json",
+      "tags": [
+        "agent",
+        "multi-agent",
+        "tool-use",
+        "reasoning",
+        "llm"
+      ],
+      "relevance_score": 0.8,
+      "organized_at": "2026-05-03T04:00:43Z"
+    },
+    {
+      "id": "kb-2026-05-03-001",
+      "title": "langgenius/dify",
+      "file": "2026-05-03-langgenius-dify.json",
+      "tags": [
+        "agent",
+        "llm",
+        "tool-use",
+        "deployment"
+      ],
+      "relevance_score": 0.8,
+      "organized_at": "2026-05-03T04:00:43Z"
+    },
+    {
+      "id": "kb-2026-05-03-009",
+      "title": "mem0ai/mem0",
+      "file": "2026-05-03-mem0ai-mem0.json",
+      "tags": [
+        "agent",
+        "llm"
+      ],
+      "relevance_score": 0.7,
+      "organized_at": "2026-05-03T04:00:43Z"
+    },
+    {
+      "id": "kb-2026-05-03-003",
+      "title": "NousResearch/hermes-agent",
+      "file": "2026-05-03-nousresearch-hermes-agent.json",
+      "tags": [
+        "agent",
+        "llm",
+        "tool-use"
+      ],
+      "relevance_score": 0.7,
+      "organized_at": "2026-05-03T04:00:43Z"
+    },
+    {
+      "id": "kb-2026-05-03-006",
+      "title": "OpenHands/OpenHands",
+      "file": "2026-05-03-openhands-openhands.json",
+      "tags": [
+        "agent",
+        "code-generation",
+        "tool-use",
+        "llm"
+      ],
+      "relevance_score": 0.7,
+      "organized_at": "2026-05-03T04:00:43Z"
+    },
+    {
+      "id": "kb-2026-05-03-004",
+      "title": "Shubhamsaboo/awesome-llm-apps",
+      "file": "2026-05-03-shubhamsaboo-awesome-llm-apps.json",
+      "tags": [
+        "agent",
+        "rag",
+        "llm",
+        "deployment"
+      ],
+      "relevance_score": 0.8,
+      "organized_at": "2026-05-03T04:00:43Z"
+    },
+    {
+      "id": "kb-2026-05-03-023",
+      "title": "Spotify adds 'Verified' badges to distinguish human artists from AI",
+      "file": "2026-05-03-spotify-adds-verified-badges-to-distinguish-human-artists-from-ai.json",
+      "tags": [
+        "audio",
+        "deployment"
+      ],
+      "relevance_score": 0.6,
+      "organized_at": "2026-05-03T04:00:43Z"
+    },
+    {
+      "id": "kb-2026-05-03-024",
+      "title": "Uber torches 2026 AI budget on Claude Code in four months",
+      "file": "2026-05-03-uber-torches-2026-ai-budget-on-claude-code-in-four-months.json",
+      "tags": [
+        "llm",
+        "code-generation",
+        "deployment",
+        "tool-use"
+      ],
+      "relevance_score": 0.7,
+      "organized_at": "2026-05-03T04:00:43Z"
+    },
+    {
+      "id": "kb-2026-05-03-012",
+      "title": "zhayujie/CowAgent",
+      "file": "2026-05-03-zhayujie-cowagent.json",
+      "tags": [
+        "agent",
+        "llm",
+        "tool-use",
+        "deployment",
+        "reasoning"
+      ],
+      "relevance_score": 0.7,
+      "organized_at": "2026-05-03T04:00:43Z"
+    },
+    {
+      "id": "kb-2026-05-03-016",
+      "title": "ZhuLinsen/daily_stock_analysis",
+      "file": "2026-05-03-zhulinsen-daily-stock-analysis.json",
+      "tags": [
+        "llm",
+        "tool-use",
+        "deployment"
+      ],
+      "relevance_score": 0.7,
+      "organized_at": "2026-05-03T04:00:43Z"
+    }
+  ]
+}

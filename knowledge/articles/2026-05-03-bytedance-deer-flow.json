@@ -1,0 +1,20 @@
+{
+  "id": "kb-2026-05-03-008",
+  "title": "bytedance/deer-flow",
+  "source": "github",
+  "source_id": "github-20260503-008",
+  "url": "https://github.com/bytedance/deer-flow",
+  "summary": "`bytedance/deer-flow` 是一个开源的长周期 SuperAgent 执行框架，面向需要持续数分钟到数小时完成的复杂任务，覆盖调研、编码与内容生成等场景。它通过结合 sandbox、memory、tools、skills、subagents 和 message gateway，提供较完整的 Agent 编排与执行能力，对构建可扩展的复杂 AI agent 系统具有较高参考价值。",
+  "tags": [
+    "agent",
+    "multi-agent",
+    "tool-use",
+    "code-generation",
+    "reasoning"
+  ],
+  "relevance_score": 0.8,
+  "collected_at": "2026-05-03T03:56:07Z",
+  "analyzed_at": "2026-05-03T04:00:43Z",
+  "organized_at": "2026-05-03T04:00:43Z",
+  "status": "published"
+}

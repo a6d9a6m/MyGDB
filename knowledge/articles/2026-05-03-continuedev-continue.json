@@ -1,0 +1,19 @@
+{
+  "id": "kb-2026-05-03-017",
+  "title": "continuedev/continue",
+  "source": "github",
+  "source_id": "github-20260503-017",
+  "url": "https://github.com/continuedev/continue",
+  "summary": "这是 Continue 团队围绕开源 Continue CLI 提供的仓库，核心方向是把 AI 驱动的代码检查纳入版本控制与 CI 流程，实现可复现、可执行、可强制的质量门禁。它的价值在于把原本分散在编辑器或人工评审中的 AI 检查能力，转化为团队级、自动化、可审计的工程实践，适合用于代码生成后的校验与交付前治理。",
+  "tags": [
+    "llm",
+    "evaluation",
+    "deployment",
+    "code-generation"
+  ],
+  "relevance_score": 0.7,
+  "collected_at": "2026-05-03T03:56:07Z",
+  "analyzed_at": "2026-05-03T04:00:43Z",
+  "organized_at": "2026-05-03T04:00:43Z",
+  "status": "published"
+}

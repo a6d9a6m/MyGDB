@@ -1,0 +1,17 @@
+{
+  "id": "kb-2026-05-05-027",
+  "title": "iOfficeAI/AionUi",
+  "source": "github",
+  "source_id": "github-20260505-027",
+  "url": "https://github.com/iOfficeAI/AionUi",
+  "summary": "Free, local, open-source 24/7 Cowork app for OpenClaw, Hermes Agent, Claude Code, Codex, OpenCode, Gemini CLI and 20+ more CLI | Customize your assistants | Star if you like it!",
+  "tags": [
+    "llm",
+    "ai"
+  ],
+  "relevance_score": 0.5,
+  "collected_at": "2026-05-05T09:53:59Z",
+  "analyzed_at": "2026-05-05T09:54:06Z",
+  "organized_at": "2026-05-05T09:54:06Z",
+  "status": "published"
+}

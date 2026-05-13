@@ -1,0 +1,18 @@
+{
+  "id": "kb-2026-05-03-016",
+  "title": "ZhuLinsen/daily_stock_analysis",
+  "source": "github",
+  "source_id": "github-20260503-016",
+  "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+  "summary": "这是一个面向 A/H/美股市场的 LLM 驱动智能分析系统，整合多数据源行情、实时新闻、分析仪表盘与多渠道推送，强调低成本甚至零成本的自动化运行。其价值在于把传统行情监控、资讯汇总与大模型分析结合起来，形成可持续执行的投资研究工作流。对于关注 LLM 在金融信息整合与自动决策辅助中的落地实践，这类项目具有较强参考意义。",
+  "tags": [
+    "llm",
+    "tool-use",
+    "deployment"
+  ],
+  "relevance_score": 0.7,
+  "collected_at": "2026-05-03T03:56:07Z",
+  "analyzed_at": "2026-05-03T04:00:43Z",
+  "organized_at": "2026-05-03T04:00:43Z",
+  "status": "published"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "kb-2026-05-03-031",
+  "title": "How to Use Transformers.js in a Chrome Extension",
+  "source": "rss:Hugging Face Blog",
+  "source_id": "rss-20260503-011",
+  "url": "https://huggingface.co/blog/transformersjs-chrome-extension",
+  "summary": "这篇内容聚焦于如何在 Chrome Extension 中集成 Transformers.js，在浏览器侧直接运行模型推理能力。其核心价值在于帮助开发者把轻量级 AI 能力嵌入扩展插件，实现更低延迟、更强隐私保护以及无需依赖后端服务的部署方案。",
+  "tags": [
+    "llm",
+    "deployment"
+  ],
+  "relevance_score": 0.7,
+  "collected_at": "2026-05-03T09:14:21Z",
+  "analyzed_at": "2026-05-03T09:22:12Z",
+  "organized_at": "2026-05-03T09:22:12Z",
+  "status": "published"
+}

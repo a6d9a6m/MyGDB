@@ -1,0 +1,17 @@
+{
+  "id": "kb-2026-05-04-030",
+  "title": "google/adk-python",
+  "source": "github",
+  "source_id": "github-20260504-030",
+  "url": "https://github.com/google/adk-python",
+  "summary": "An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.",
+  "tags": [
+    "llm",
+    "ai"
+  ],
+  "relevance_score": 0.5,
+  "collected_at": "2026-05-04T10:06:35Z",
+  "analyzed_at": "2026-05-04T10:06:42Z",
+  "organized_at": "2026-05-04T10:06:42Z",
+  "status": "published"
+}

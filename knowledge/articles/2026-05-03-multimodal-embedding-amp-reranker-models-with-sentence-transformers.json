@@ -1,0 +1,18 @@
+{
+  "id": "kb-2026-05-03-040",
+  "title": "Multimodal Embedding &amp; Reranker Models with Sentence Transformers",
+  "source": "rss:Hugging Face Blog",
+  "source_id": "rss-20260503-020",
+  "url": "https://huggingface.co/blog/multimodal-sentence-transformers",
+  "summary": "文章聚焦于如何基于 Sentence Transformers 构建多模态 Embedding 与 Reranker 模型，用于统一表示文本与图像等不同模态，并提升检索排序效果。其核心价值在于为语义搜索、跨模态检索和 RAG 场景提供更实用的模型方案与实现思路，帮助开发者在现有检索系统中提升召回与重排质量。",
+  "tags": [
+    "vision",
+    "rag",
+    "evaluation"
+  ],
+  "relevance_score": 0.7,
+  "collected_at": "2026-05-03T09:14:21Z",
+  "analyzed_at": "2026-05-03T09:22:12Z",
+  "organized_at": "2026-05-03T09:22:12Z",
+  "status": "published"
+}

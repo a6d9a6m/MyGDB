@@ -1,0 +1,17 @@
+{
+  "id": "kb-2026-05-04-027",
+  "title": "mastra-ai/mastra",
+  "source": "github",
+  "source_id": "github-20260504-027",
+  "url": "https://github.com/mastra-ai/mastra",
+  "summary": "From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
+  "tags": [
+    "llm",
+    "ai"
+  ],
+  "relevance_score": 0.5,
+  "collected_at": "2026-05-04T10:06:35Z",
+  "analyzed_at": "2026-05-04T10:06:42Z",
+  "organized_at": "2026-05-04T10:06:42Z",
+  "status": "published"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "kb-2026-05-03-022",
+  "title": "AI uses less water than the public thinks",
+  "source": "rss:Hacker News (Best)",
+  "source_id": "rss-20260503-002",
+  "url": "https://californiawaterblog.com/2026/04/26/ai-water-use-distractions-and-lessons-for-california/",
+  "summary": "这篇内容聚焦于澄清公众对 AI 用水量的常见误解，核心观点是实际水资源消耗往往低于流行叙事中的夸张估计。对 AI 从业者而言，这类讨论的价值在于帮助更理性地评估模型训练与推理的环境成本，并为部署策略、基础设施沟通和可持续性决策提供更准确的背景。",
+  "tags": [
+    "llm",
+    "deployment"
+  ],
+  "relevance_score": 0.6,
+  "collected_at": "2026-05-03T03:56:08Z",
+  "analyzed_at": "2026-05-03T04:00:43Z",
+  "organized_at": "2026-05-03T04:00:43Z",
+  "status": "published"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "kb-2026-05-04-025",
+  "title": "deepset-ai/haystack",
+  "source": "github",
+  "source_id": "github-20260504-025",
+  "url": "https://github.com/deepset-ai/haystack",
+  "summary": "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, m",
+  "tags": [
+    "llm",
+    "ai"
+  ],
+  "relevance_score": 0.5,
+  "collected_at": "2026-05-04T10:06:35Z",
+  "analyzed_at": "2026-05-04T10:06:42Z",
+  "organized_at": "2026-05-04T10:06:42Z",
+  "status": "published"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "kb-2026-05-04-001",
+  "title": "langgenius/dify",
+  "source": "github",
+  "source_id": "github-20260504-001",
+  "url": "https://github.com/langgenius/dify",
+  "summary": "Dify 是一个面向生产环境的 AI 应用与 Agentic Workflow 开发平台，强调把大模型能力、工具调用、知识库与工作流编排整合到统一系统中。对于团队来说，它的价值在于降低从原型到上线的工程门槛，让应用开发、调试、部署与运营更加标准化。结合其开源生态，这类平台也适合作为企业快速落地 LLM/Agent 应用的基础设施。",
+  "tags": [
+    "agent",
+    "llm",
+    "deployment",
+    "tool-use"
+  ],
+  "relevance_score": 0.8,
+  "collected_at": "2026-05-04T03:40:15Z",
+  "analyzed_at": "2026-05-04T03:40:22Z",
+  "organized_at": "2026-05-04T03:40:22Z",
+  "status": "published"
+}

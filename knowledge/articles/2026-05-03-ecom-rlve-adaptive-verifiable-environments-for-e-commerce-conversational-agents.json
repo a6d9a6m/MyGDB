@@ -1,0 +1,18 @@
+{
+  "id": "kb-2026-05-03-034",
+  "title": "Ecom-RLVE: Adaptive Verifiable Environments for E-Commerce Conversational Agents",
+  "source": "rss:Hugging Face Blog",
+  "source_id": "rss-20260503-014",
+  "url": "https://huggingface.co/blog/ecom-rlve",
+  "summary": "这篇内容聚焦于面向电商对话智能体的可验证环境设计，提出一种自适应的 RLVE 框架，用于在更贴近真实业务的交互场景中评估和训练 Agent。其价值在于把任务环境、行为验证与效果评估结合起来，有助于提升电商客服或导购类智能体的可靠性、可测性和落地质量。",
+  "tags": [
+    "agent",
+    "evaluation",
+    "tool-use"
+  ],
+  "relevance_score": 0.7,
+  "collected_at": "2026-05-03T09:14:21Z",
+  "analyzed_at": "2026-05-03T09:22:12Z",
+  "organized_at": "2026-05-03T09:22:12Z",
+  "status": "published"
+}

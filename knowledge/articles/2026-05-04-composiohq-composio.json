@@ -1,0 +1,17 @@
+{
+  "id": "kb-2026-05-04-021",
+  "title": "ComposioHQ/composio",
+  "source": "github",
+  "source_id": "github-20260504-021",
+  "url": "https://github.com/ComposioHQ/composio",
+  "summary": "Composio powers 1000+ toolkits, tool search, context management, authentication, and a sandboxed workbench to help you build AI agents that turn intent into action.",
+  "tags": [
+    "llm",
+    "ai"
+  ],
+  "relevance_score": 0.5,
+  "collected_at": "2026-05-04T10:06:35Z",
+  "analyzed_at": "2026-05-04T10:06:42Z",
+  "organized_at": "2026-05-04T10:06:42Z",
+  "status": "published"
+}

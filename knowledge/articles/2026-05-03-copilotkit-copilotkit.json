@@ -1,0 +1,18 @@
+{
+  "id": "kb-2026-05-03-020",
+  "title": "CopilotKit/CopilotKit",
+  "source": "github",
+  "source_id": "github-20260503-020",
+  "url": "https://github.com/CopilotKit/CopilotKit",
+  "summary": "CopilotKit 提供面向 Agent 与生成式 UI 的前端技术栈，支持 React 和 Angular，目标是帮助开发者更快构建可交互的 AI 应用界面。其价值在于把前端组件、Agent 交互模式与协议层能力结合起来，降低将大模型和工具调用能力集成到产品界面的工程复杂度。",
+  "tags": [
+    "agent",
+    "tool-use",
+    "llm"
+  ],
+  "relevance_score": 0.7,
+  "collected_at": "2026-05-03T03:56:07Z",
+  "analyzed_at": "2026-05-03T04:00:43Z",
+  "organized_at": "2026-05-03T04:00:43Z",
+  "status": "published"
+}

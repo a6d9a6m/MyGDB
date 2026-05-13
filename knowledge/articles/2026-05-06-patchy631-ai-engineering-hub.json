@@ -1,0 +1,17 @@
+{
+  "id": "kb-2026-05-06-017",
+  "title": "patchy631/ai-engineering-hub",
+  "source": "github",
+  "source_id": "github-20260506-017",
+  "url": "https://github.com/patchy631/ai-engineering-hub",
+  "summary": "In-depth tutorials on LLMs, RAGs and real-world AI agent applications.",
+  "tags": [
+    "llm",
+    "ai"
+  ],
+  "relevance_score": 0.5,
+  "collected_at": "2026-05-06T10:09:51Z",
+  "analyzed_at": "2026-05-06T10:09:59Z",
+  "organized_at": "2026-05-06T10:09:59Z",
+  "status": "published"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "kb-2026-05-04-028",
+  "title": "volcengine/OpenViking",
+  "source": "github",
+  "source_id": "github-20260504-028",
+  "url": "https://github.com/volcengine/OpenViking",
+  "summary": "OpenViking is an open-source context database designed specifically for AI Agents(such as openclaw). OpenViking unifies the management of context (memory, resources, and skills) that Agents need throu",
+  "tags": [
+    "llm",
+    "ai"
+  ],
+  "relevance_score": 0.5,
+  "collected_at": "2026-05-04T10:06:35Z",
+  "analyzed_at": "2026-05-04T10:06:42Z",
+  "organized_at": "2026-05-04T10:06:42Z",
+  "status": "published"
+}
