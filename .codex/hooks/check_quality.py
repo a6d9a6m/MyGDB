@@ -146,17 +146,20 @@ def score_tech_depth(data: dict[str, Any]) -> DimensionScore:
     """
     维度 2：技术深度（25 分）
 
-    基于文章 score 字段映射。
+    优先基于 contract 的 relevance_score 字段映射。
     """
     max_score = 25.0
-    article_score = data.get("score", 5)
+    article_score = data.get("relevance_score", data.get("score", 5))
 
     if not isinstance(article_score, (int, float)):
-        return DimensionScore("技术深度", 10, max_score, "score 字段类型异常")
+        return DimensionScore("技术深度", 10, max_score, "relevance_score 字段类型异常")
 
-    # 将 1-10 的 score 映射到 0-25
-    mapped = (article_score / 10) * max_score
-    detail = f"文章评分 {article_score}/10 → {mapped:.1f}/{max_score}"
+    if article_score > 1:
+        mapped = (article_score / 10) * max_score
+        detail = f"旧版文章评分 {article_score}/10 → {mapped:.1f}/{max_score}"
+    else:
+        mapped = article_score * max_score
+        detail = f"相关性评分 {article_score:.2f}/1.00 → {mapped:.1f}/{max_score}"
 
     return DimensionScore("技术深度", round(mapped, 1), max_score, detail)
 
@@ -168,9 +171,9 @@ def score_format(data: dict[str, Any]) -> DimensionScore:
     检查项：
     - 有 id (+4)
     - 有 title (+4)
-    - 有 source_url (+4)
-    - 有 status (+4)
-    - 有 updated_at 或 collected_at (+4)
+    - 有 url (+4)
+    - 有 source_id/status (+4)
+    - 有 organized_at 或 collected_at (+4)
     """
     max_score = 20.0
     score = 0.0
@@ -179,8 +182,9 @@ def score_format(data: dict[str, Any]) -> DimensionScore:
     field_checks = [
         ("id", 4),
         ("title", 4),
-        ("source_url", 4),
-        ("status", 4),
+        ("url", 4),
+        ("source_id", 2),
+        ("status", 2),
     ]
 
     for field_name, points in field_checks:
@@ -191,7 +195,7 @@ def score_format(data: dict[str, Any]) -> DimensionScore:
             checks.append(f"缺少 {field_name}")
 
     # 时间戳
-    if data.get("updated_at") or data.get("collected_at"):
+    if data.get("organized_at") or data.get("collected_at"):
         score += 4
     else:
         checks.append("缺少时间戳")
@@ -288,13 +292,13 @@ def evaluate_quality(filepath: str, data: dict[str, Any]) -> QualityReport:
 
 def print_report(report: QualityReport) -> None:
     """格式化输出评估报告"""
-    print(f"\n{'─'*50}")
+    print(f"\n{'-'*50}")
     print(f"文件: {report.filepath}")
-    print(f"{'─'*50}")
+    print(f"{'-'*50}")
 
     for d in report.dimensions:
         bar_len = int(d.percentage / 5)  # 20 格满分
-        bar = "█" * bar_len + "░" * (20 - bar_len)
+        bar = "#" * bar_len + "." * (20 - bar_len)
         print(f"  {d.name:8s} [{bar}] {d.score:5.1f}/{d.max_score:.0f}  {d.details}")
 
     print(f"\n  总分: {report.total_score:.1f}/{report.max_total:.0f}  "
@@ -314,7 +318,7 @@ def main() -> int:
     for arg in raw_args:
         p = Path(arg)
         if p.is_dir():
-            files.extend(str(f) for f in sorted(p.glob("*.json")))
+            files.extend(str(f) for f in sorted(p.glob("*.json")) if f.name != "index.json")
         else:
             files.append(arg)
 

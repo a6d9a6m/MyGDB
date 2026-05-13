@@ -24,13 +24,21 @@ from typing import Any
 import httpx
 from dotenv import load_dotenv
 
+from MyGK_DB.knowledge_contract import (
+    ARTICLES_DIR,
+    PROJECT_ROOT,
+    RAW_DIR,
+    make_raw_batch,
+    normalize_analyzed_item,
+    normalize_timestamp,
+    publish_analyzed_items,
+    utc_now,
+)
+
 from .rss import collect_rss  # noqa: F401 — 重导出供内部使用
 
 # ── 项目路径 ─────────────────────────────────────────────────────────────
 
-PROJECT_ROOT = Path(__file__).resolve().parents[3]
-RAW_DIR = PROJECT_ROOT / "knowledge" / "raw"
-ARTICLES_DIR = PROJECT_ROOT / "knowledge" / "articles"
 HOOKS_DIR = PROJECT_ROOT / ".codex" / "hooks"
 VALIDATE_HOOK = HOOKS_DIR / "validate_json.py"
 QUALITY_HOOK = HOOKS_DIR / "check_quality.py"
@@ -79,18 +87,19 @@ def collect_github(limit: int = 10) -> list[dict[str, Any]]:
             data = resp.json()
 
             for i, repo in enumerate(data.get("items", [])[:limit]):
-                now = datetime.now(timezone.utc).isoformat()
+                now = utc_now()
                 results.append({
-                    "id": f"github-{datetime.now().strftime('%Y%m%d')}-{i+1:03d}",
+                    "id": repo["full_name"],
                     "title": repo["full_name"],
-                    "source": "github",
-                    "source_url": repo["html_url"],
+                    "source": "github-trending",
+                    "description": repo.get("description", "") or "",
+                    "url": repo["html_url"],
                     "author": repo["owner"]["login"],
-                    "published_at": repo.get("pushed_at", ""),
-                    "raw_description": repo.get("description", "") or "",
                     "stars": repo.get("stargazers_count", 0),
                     "language": repo.get("language", ""),
                     "topics": repo.get("topics", []),
+                    "created_at": normalize_timestamp(repo.get("created_at"), fallback=now),
+                    "updated_at": normalize_timestamp(repo.get("updated_at") or repo.get("pushed_at"), fallback=now),
                     "collected_at": now,
                 })
 
@@ -127,15 +136,25 @@ def step_collect(sources: list[str], limit: int) -> list[dict[str, Any]]:
     if "rss" in sources:
         all_items.extend(collect_rss(limit))
 
-    # 保存原始数据
+    # 保存原始数据：兼容流水线内部的扁平列表，同时额外输出 contract raw batch。
     RAW_DIR.mkdir(parents=True, exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     raw_file = RAW_DIR / f"raw_{timestamp}.json"
     with open(raw_file, "w", encoding="utf-8") as f:
         json.dump(all_items, f, ensure_ascii=False, indent=2)
 
+    batch = make_raw_batch(
+        source=",".join(sources),
+        items=all_items,
+        query=f"sources={','.join(sources)} limit={limit}",
+    )
+    batch_file = RAW_DIR / f"raw-batch-{timestamp}.json"
+    with open(batch_file, "w", encoding="utf-8") as f:
+        json.dump(batch, f, ensure_ascii=False, indent=2)
+
     print(f"  采集到 {len(all_items)} 条原始数据")
     print(f"  保存到 {raw_file}")
+    print(f"  Contract batch 保存到 {batch_file}")
 
     return all_items
 
@@ -148,26 +167,33 @@ ANALYZE_PROMPT_TEMPLATE = """请分析以下 AI 技术内容，返回 JSON 格�
 - 标题：{title}
 - 来源：{source}
 - 描述：{description}
+- URL：{url}
 
 请返回以下格式的 JSON（不要包含 markdown 代码块标记）：
 {{
-  "summary": "2-3 句话的技术摘要，说明核心内容和价值",
-  "score": 7,
-  "tags": ["tag1", "tag2"],
-  "audience": "intermediate"
+  "summary": "100-200 字中文技术摘要，说明核心内容、工程价值和适用场景",
+  "relevance_score": 0.72,
+  "score_breakdown": {{
+    "tech_depth": 0.70,
+    "practical_value": 0.80,
+    "timeliness": 0.65,
+    "community_heat": 0.75,
+    "domain_match": 0.70
+  }},
+  "tags": ["agent", "llm", "deployment"]
 }}
 
-评分标准（1-10）：
-- 9-10: 突破性创新
-- 7-8: 优秀技术分享
-- 5-6: 普通有用信息
-- 3-4: 内容较浅
-- 1-2: 低质量
+评分范围均为 0.00-1.00：
+- tech_depth: 技术深度
+- practical_value: 实用价值
+- timeliness: 时效性
+- community_heat: 社区热度
+- domain_match: AI/LLM/Agent 领域匹配度
 
 可用标签：agent, rag, mcp, llm, fine-tuning, prompt-engineering, multi-agent,
 tool-use, evaluation, deployment, security, reasoning, code-generation, vision, audio
 
-audience 可选值：beginner, intermediate, advanced"""
+标签必须英文小写，多词使用连字符。"""
 
 
 def _extract_json_object(text: str) -> dict[str, Any]:
@@ -246,27 +272,35 @@ def step_analyze(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
         prompt = ANALYZE_PROMPT_TEMPLATE.format(
             title=item["title"],
             source=item["source"],
-            description=item.get("raw_description", "无描述"),
+            description=item.get("description") or item.get("raw_description", "无描述"),
+            url=item.get("url") or item.get("source_url", ""),
         )
 
         try:
             analysis = analyze_with_codex_cli(prompt, model=model)
-            enriched = {**item, **analysis}
-            enriched["status"] = "review"
-            enriched["analyzed_at"] = datetime.now(timezone.utc).isoformat()
+            enriched = normalize_analyzed_item({
+                **item,
+                **analysis,
+                "analyzed_at": utc_now(),
+            })
             analyzed.append(enriched)
 
         except (subprocess.CalledProcessError, json.JSONDecodeError, KeyError) as e:
             logger.warning("Codex CLI 分析失败: %s — %s", item["title"], e)
-            enriched = {
+            enriched = normalize_analyzed_item({
                 **item,
-                "summary": item.get("raw_description", "")[:200],
-                "score": 5,
-                "tags": ["llm"],
-                "audience": "intermediate",
-                "status": "draft",
-                "analyzed_at": datetime.now(timezone.utc).isoformat(),
-            }
+                "summary": (item.get("description") or item.get("raw_description", ""))[:200],
+                "relevance_score": 0.5,
+                "score_breakdown": {
+                    "tech_depth": 0.5,
+                    "practical_value": 0.5,
+                    "timeliness": 0.5,
+                    "community_heat": 0.5,
+                    "domain_match": 0.5,
+                },
+                "tags": ["llm", "ai"],
+                "analyzed_at": utc_now(),
+            })
             analyzed.append(enriched)
 
     print(f"  分析完成: {len(analyzed)} 条")
@@ -290,7 +324,7 @@ def step_organize(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
     print(f"[Organize] Step 3: 整理（{len(items)} 条内容）")
     print(f"{'='*60}")
 
-    # 去重：按 source_url 去重
+    # 去重：按 url 去重。最终发布阶段还会结合历史库再次去重。
     seen_urls: set[str] = set()
     unique: list[dict[str, Any]] = []
 
@@ -300,39 +334,26 @@ def step_organize(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
             try:
                 with open(f, "r", encoding="utf-8") as fh:
                     existing = json.load(fh)
-                    if "source_url" in existing:
+                    if "url" in existing:
+                        seen_urls.add(existing["url"])
+                    elif "source_url" in existing:
                         seen_urls.add(existing["source_url"])
             except (json.JSONDecodeError, IOError):
                 pass
 
     dedup_count = 0
     for item in items:
-        url = item.get("source_url", "")
+        url = item.get("url") or item.get("source_url", "")
         if url in seen_urls:
             dedup_count += 1
             continue
         seen_urls.add(url)
         unique.append(item)
 
-    # 格式标准化
+    # 标准化为 analyzed item，发布格式交给 step_save。
     organized: list[dict[str, Any]] = []
     for item in unique:
-        article = {
-            "id": item.get("id", "unknown-000"),
-            "title": item.get("title", ""),
-            "source": item.get("source", "unknown"),
-            "source_url": item.get("source_url", ""),
-            "author": item.get("author", "unknown"),
-            "published_at": item.get("published_at", ""),
-            "collected_at": item.get("collected_at", ""),
-            "summary": item.get("summary", ""),
-            "score": max(1, min(10, item.get("score", 5))),
-            "tags": item.get("tags", []),
-            "audience": item.get("audience", "intermediate"),
-            "status": item.get("status", "draft"),
-            "updated_at": datetime.now(timezone.utc).isoformat(),
-        }
-        organized.append(article)
+        organized.append(normalize_analyzed_item(item))
 
     print(f"  去重: 移除 {dedup_count} 条重复")
     print(f"  整理后: {len(organized)} 条")
@@ -357,24 +378,23 @@ def step_save(items: list[dict[str, Any]], dry_run: bool = False) -> list[Path]:
     print(f"[Save] Step 4: 保存（{len(items)} 条内容，dry_run={dry_run}）")
     print(f"{'='*60}")
 
-    ARTICLES_DIR.mkdir(parents=True, exist_ok=True)
-    saved_files: list[Path] = []
+    result = publish_analyzed_items(items, dry_run=dry_run)
 
-    for item in items:
-        filename = f"{item['id']}.json"
-        filepath = ARTICLES_DIR / filename
-
+    for filepath in result.saved_files:
         if dry_run:
-            print(f"  [DRY RUN] 将保存: {filepath}")
+            print(f"  [DRY RUN] 将发布: {filepath}")
         else:
-            with open(filepath, "w", encoding="utf-8") as f:
-                json.dump(item, f, ensure_ascii=False, indent=2)
-            print(f"  已保存: {filepath}")
+            print(f"  已发布: {filepath}")
 
-        saved_files.append(filepath)
+    if result.filtered_log_file:
+        print(f"  过滤日志: {result.filtered_log_file}")
+    if result.index_file:
+        print(f"  索引文件: {result.index_file}")
+    if result.filtered_items:
+        print(f"  过滤: {len(result.filtered_items)} 条")
 
-    print(f"\n  共 {'模拟' if dry_run else ''}保存 {len(saved_files)} 个文件")
-    return saved_files
+    print(f"\n  共 {'模拟' if dry_run else ''}发布 {len(result.saved_files)} 个文件")
+    return result.saved_files
 
 
 def _load_hook_module(name: str, path: Path) -> Any:

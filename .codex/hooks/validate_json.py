@@ -17,41 +17,18 @@ Codex hook:
 from __future__ import annotations
 
 import json
-import re
 import sys
 from pathlib import Path
-from typing import Any
 
-# ── 校验规则 ─────────────────────────────────────────────────────────────
+ROOT = Path(__file__).resolve().parents[2]
+SRC = ROOT / "src"
+if str(SRC) not in sys.path:
+    sys.path.insert(0, str(SRC))
 
-# 必填字段及其类型
-REQUIRED_FIELDS: dict[str, type] = {
-    "id": str,
-    "title": str,
-    "source_url": str,
-    "summary": str,
-    "tags": list,
-    "status": str,
-}
-
-# ID 格式：{source}-{YYYYMMDD}-{NNN}
-ID_PATTERN = re.compile(r"^[a-z][\w:-]+-\d{8}-\d{3}$")
-
-# 合法的 status 值
-VALID_STATUSES = {"draft", "review", "published", "archived"}
-
-# score 范围
-SCORE_MIN = 1
-SCORE_MAX = 10
-
-# URL 基本格式
-URL_PATTERN = re.compile(r"^https?://\S+$")
-
-# 摘要最小长度（字符数）
-SUMMARY_MIN_LENGTH = 20
-
-# 合法的 audience 值
-VALID_AUDIENCES = {"beginner", "intermediate", "advanced"}
+from MyGK_DB.knowledge_contract import (  # noqa: E402
+    validate_article_contract,
+    validate_index_contract,
+)
 
 
 def expand_json_files(args: list[str]) -> list[str]:
@@ -59,7 +36,7 @@ def expand_json_files(args: list[str]) -> list[str]:
     for arg in args:
         path = Path(arg)
         if path.is_dir():
-            files.extend(str(f) for f in sorted(path.glob("*.json")) if f.name != "index.json")
+            files.extend(str(f) for f in sorted(path.glob("*.json")))
         else:
             files.append(arg)
     return files
@@ -67,7 +44,7 @@ def expand_json_files(args: list[str]) -> list[str]:
 
 # ── 校验函数 ─────────────────────────────────────────────────────────────
 
-def validate_article(data: dict[str, Any]) -> list[str]:
+def validate_article(data: dict) -> list[str]:
     """
     校验单篇文章，返回错误列表。
 
@@ -77,84 +54,7 @@ def validate_article(data: dict[str, Any]) -> list[str]:
     Returns:
         错误消息列表，空列表表示校验通过
     """
-    errors: list[str] = []
-
-    # 检查必填字段
-    for field_name, field_type in REQUIRED_FIELDS.items():
-        if field_name not in data:
-            errors.append(f"缺少必填字段: {field_name}")
-        elif not isinstance(data[field_name], field_type):
-            errors.append(
-                f"字段类型错误: {field_name} 应为 {field_type.__name__}，"
-                f"实际为 {type(data[field_name]).__name__}"
-            )
-
-    # 如果必填字段缺失，后续校验无意义
-    if errors:
-        return errors
-
-    # ID 格式
-    article_id = data["id"]
-    if not ID_PATTERN.match(article_id):
-        errors.append(
-            f"ID 格式错误: '{article_id}'，"
-            f"应为 '{{source}}-{{YYYYMMDD}}-{{NNN}}'"
-        )
-
-    # 标题非空
-    if not data["title"].strip():
-        errors.append("标题不能为空")
-
-    # URL 格式
-    source_url = data["source_url"]
-    if not URL_PATTERN.match(source_url):
-        errors.append(f"URL 格式错误: '{source_url}'")
-
-    # 摘要长度
-    summary = data["summary"]
-    if len(summary.strip()) < SUMMARY_MIN_LENGTH:
-        errors.append(
-            f"摘要太短: {len(summary.strip())} 字，"
-            f"要求至少 {SUMMARY_MIN_LENGTH} 字"
-        )
-
-    # 标签非空
-    tags = data["tags"]
-    if len(tags) == 0:
-        errors.append("至少需要 1 个标签")
-    for tag in tags:
-        if not isinstance(tag, str) or not tag.strip():
-            errors.append(f"标签格式错误: '{tag}'")
-
-    # status 值
-    status = data["status"]
-    if status not in VALID_STATUSES:
-        errors.append(
-            f"无效的 status: '{status}'，"
-            f"允许值: {', '.join(sorted(VALID_STATUSES))}"
-        )
-
-    # score 范围（可选字段，存在时校验）
-    if "score" in data:
-        score = data["score"]
-        if not isinstance(score, (int, float)):
-            errors.append(f"score 应为数字，实际为 {type(score).__name__}")
-        elif not (SCORE_MIN <= score <= SCORE_MAX):
-            errors.append(
-                f"score 超出范围: {score}，"
-                f"允许范围: {SCORE_MIN}-{SCORE_MAX}"
-            )
-
-    # audience（可选字段，存在时校验）
-    if "audience" in data:
-        audience = data["audience"]
-        if audience not in VALID_AUDIENCES:
-            errors.append(
-                f"无效的 audience: '{audience}'，"
-                f"允许值: {', '.join(sorted(VALID_AUDIENCES))}"
-            )
-
-    return errors
+    return validate_article_contract(data)
 
 
 # ── CLI 入口 ─────────────────────────────────────────────────────────────
@@ -188,7 +88,10 @@ def main() -> int:
             failed_files += 1
             continue
 
-        errors = validate_article(data)
+        if path.name == "index.json":
+            errors = validate_index_contract(data, path.parent)
+        else:
+            errors = validate_article(data)
         if errors:
             all_errors[filepath] = errors
             failed_files += 1

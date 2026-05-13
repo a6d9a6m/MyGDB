@@ -17,12 +17,13 @@ from __future__ import annotations
 
 import logging
 import re
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
 import httpx
 import yaml
+
+from MyGK_DB.knowledge_contract import normalize_timestamp, utc_now
 
 logger = logging.getLogger(__name__)
 
@@ -77,18 +78,17 @@ def collect_rss(limit: int = 10) -> list[dict[str, Any]]:
                     if not title or not link:
                         continue
 
-                    now = datetime.now(timezone.utc).isoformat()
+                    now = utc_now()
                     count += 1
                     results.append({
-                        "id": f"rss-{datetime.now().strftime('%Y%m%d')}-{count:03d}",
+                        "id": link,
                         "title": title,
                         "source": f"rss:{source['name']}",
-                        "source_url": link,
+                        "url": link,
                         "author": source.get("name", "unknown"),
-                        "published_at": now,
-                        "raw_description": "",
+                        "description": "",
                         "category": source.get("category", "general"),
-                        "collected_at": now,
+                        "collected_at": normalize_timestamp(now),
                     })
 
                 logger.info("RSS [%s] 采集: %d 条", source["name"], len(items))

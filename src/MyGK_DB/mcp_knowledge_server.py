@@ -37,9 +37,13 @@ def load_articles() -> list[dict]:
     if not ARTICLES_DIR.exists():
         return articles
     for f in sorted(ARTICLES_DIR.glob("*.json")):
+        if f.name == "index.json":
+            continue
         try:
             with open(f, "r", encoding="utf-8") as fh:
-                articles.append(json.load(fh))
+                article = json.load(fh)
+            if article.get("status") == "published":
+                articles.append(article)
         except (json.JSONDecodeError, OSError):
             continue
     return articles
@@ -59,10 +63,12 @@ def search_articles(keyword: str, limit: int = 5) -> list[dict]:
             results.append({
                 "id": article.get("id", ""),
                 "title": article.get("title", ""),
-                "score": article.get("score", ""),
+                "relevance_score": article.get("relevance_score", ""),
                 "tags": article.get("tags", []),
                 "summary": article.get("summary", "")[:120] + "...",
+                "url": article.get("url", ""),
             })
+    results.sort(key=lambda item: item.get("relevance_score") or 0, reverse=True)
     return results[:limit]
 
 
@@ -123,7 +129,7 @@ TOOLS = [
             "properties": {
                 "article_id": {
                     "type": "string",
-                    "description": "文章 ID，如 github-20260326-001",
+                    "description": "文章 ID，如 kb-2026-05-01-001",
                 },
             },
             "required": ["article_id"],

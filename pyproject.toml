@@ -14,9 +14,15 @@ dependencies = [
   "PyYAML>=6.0",
 ]
 
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+]
+
 [project.scripts]
 mygk-pipeline = "MyGK_DB.pipeline.pipeline:main"
 mygk-mcp-server = "MyGK_DB.mcp_knowledge_server:main"
+mygk-migrate-articles = "MyGK_DB.scripts.migrate_articles:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
