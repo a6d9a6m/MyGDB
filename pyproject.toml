@@ -9,18 +9,24 @@ description = "Local AI knowledge-base collection, analysis, and publishing tool
 readme = "AGENTS.md"
 requires-python = ">=3.11"
 dependencies = [
+  "feedparser>=6.0",
   "httpx>=0.27",
+  "langgraph>=1.0,<2.0",
   "python-dotenv>=1.0",
   "PyYAML>=6.0",
 ]
 
 [project.optional-dependencies]
+checkpoint = [
+  "langgraph-checkpoint-sqlite>=3.0.1",
+]
 dev = [
   "pytest>=8.0",
 ]
 
 [project.scripts]
 mygk-pipeline = "MyGK_DB.pipeline.pipeline:main"
+mygk-graph-pipeline = "MyGK_DB.pipeline.graph:main"
 mygk-mcp-server = "MyGK_DB.mcp_knowledge_server:main"
 mygk-migrate-articles = "MyGK_DB.scripts.migrate_articles:main"
 
