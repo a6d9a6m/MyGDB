@@ -68,6 +68,7 @@ jobs:
       - name: Run collection pipeline
         run: |
           mygk-pipeline \
+            --engine graph \
             --sources github,rss \
             --limit 20 \
             --model "${CODEX_MODEL}" \
