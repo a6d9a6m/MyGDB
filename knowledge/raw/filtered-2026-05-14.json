@@ -1,0 +1,106 @@
+{
+  "date": "2026-05-14",
+  "filtered_at": "2026-05-14T10:06:45Z",
+  "items": [
+    {
+      "source_id": "https://arxiv.org/abs/2605.12620",
+      "title": "Think Twice, Act Once: Verifier-Guided Action Selection For Embodied Agents",
+      "reason": "incomplete: summary is too short"
+    },
+    {
+      "source_id": "https://arxiv.org/abs/2605.12655",
+      "title": "Macro-Action Based Multi-Agent Instruction Following through Value Cancellation",
+      "reason": "incomplete: summary is too short"
+    },
+    {
+      "source_id": "https://arxiv.org/abs/2605.12673",
+      "title": "Do Androids Dream of Breaking the Game? Systematically Auditing AI Agent Benchmarks with BenchJack",
+      "reason": "incomplete: summary is too short"
+    },
+    {
+      "source_id": "https://arxiv.org/abs/2605.12674",
+      "title": "Revealing Interpretable Failure Modes of VLMs",
+      "reason": "incomplete: summary is too short"
+    },
+    {
+      "source_id": "https://arxiv.org/abs/2605.12682",
+      "title": "Learning Transferable Latent User Preferences for Human-Aligned Decision Making",
+      "reason": "incomplete: summary is too short"
+    },
+    {
+      "source_id": "https://arxiv.org/abs/2605.12691",
+      "title": "On the Size Complexity and Decidability of First-Order Progression",
+      "reason": "incomplete: summary is too short"
+    },
+    {
+      "source_id": "https://arxiv.org/abs/2605.12702",
+      "title": "DisaBench: A Participatory Evaluation Framework for Disability Harms in Language Models",
+      "reason": "incomplete: summary is too short"
+    },
+    {
+      "source_id": "https://arxiv.org/abs/2605.12718",
+      "title": "CHAL: Council of Hierarchical Agentic Language",
+      "reason": "incomplete: summary is too short"
+    },
+    {
+      "source_id": "https://arxiv.org/abs/2605.12730",
+      "title": "BEHAVE: A Hybrid AI Framework for Real-Time Modeling of Collective Human Dynamics",
+      "reason": "incomplete: summary is too short"
+    },
+    {
+      "source_id": "https://arxiv.org/abs/2605.12755",
+      "title": "State-Centric Decision Process",
+      "reason": "incomplete: summary is too short"
+    },
+    {
+      "source_id": "https://arxiv.org/abs/2605.12835",
+      "title": "PROMETHEUS: Automating Deep Causal Research Integrating Text, Data and Models",
+      "reason": "incomplete: summary is too short"
+    },
+    {
+      "source_id": "https://arxiv.org/abs/2605.12838",
+      "title": "Multimodal Hidden Markov Models for Persistent Emotional State Tracking",
+      "reason": "incomplete: summary is too short"
+    },
+    {
+      "source_id": "https://arxiv.org/abs/2605.12856",
+      "title": "Moltbook Moderation: Uncovering Hidden Intent Through Multi-Turn Dialogue",
+      "reason": "incomplete: summary is too short"
+    },
+    {
+      "source_id": "https://arxiv.org/abs/2605.12894",
+      "title": "Beyond Cooperative Simulators: Generating Realistic User Personas for Robust Evaluation of LLM Agents",
+      "reason": "incomplete: summary is too short"
+    },
+    {
+      "source_id": "https://arxiv.org/abs/2605.12922",
+      "title": "When Attention Closes: How LLMs Lose the Thread in Multi-Turn Interaction",
+      "reason": "incomplete: summary is too short"
+    },
+    {
+      "source_id": "https://arxiv.org/abs/2605.12963",
+      "title": "Sustaining AI safety: Control-theoretic external impossibility, intrinsic necessity, and structural requirements",
+      "reason": "incomplete: summary is too short"
+    },
+    {
+      "source_id": "https://arxiv.org/abs/2605.12966",
+      "title": "Position: Agentic AI System Is a Foreseeable Pathway to AGI",
+      "reason": "incomplete: summary is too short"
+    },
+    {
+      "source_id": "https://arxiv.org/abs/2605.12975",
+      "title": "Retrieval is Cheap, Show Me the Code: Executable Multi-Hop Reasoning for Retrieval-Augmented Generation",
+      "reason": "incomplete: summary is too short"
+    },
+    {
+      "source_id": "https://arxiv.org/abs/2605.12978",
+      "title": "Useful Memories Become Faulty When Continuously Updated by LLMs",
+      "reason": "incomplete: summary is too short"
+    },
+    {
+      "source_id": "https://arxiv.org/abs/2605.12988",
+      "title": "Retrieval-Augmented Tutoring for Algorithm Tracing and Problem-Solving in AI Education",
+      "reason": "incomplete: summary is too short"
+    }
+  ]
+}
