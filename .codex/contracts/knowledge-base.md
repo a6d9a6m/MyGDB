@@ -195,3 +195,89 @@ Organizer 过滤掉的条目必须记录到日志中。
 - Collector 只生成 Raw Batch / Raw Item。
 - Analyzer 只补充 Analyzed Item 字段。
 - Organizer 才能生成 Article Item、Index File、Filtered Log。
+
+## 9. Source Registry
+
+Graph pipeline 使用统一 source registry 描述来源配置。当前 RSS registry
+仍位于 `src/MyGK_DB/pipeline/rss/rss_sources.yaml`，GitHub Trending 由代码内置默认项提供。
+
+每个 source entry 的标准字段：
+
+- `id`: 来源稳定标识，例如 `github-trending` 或 `rss:langchain-blog`
+- `type`: `github` 或 `rss`
+- `name`: 人类可读名称
+- `enabled`: 是否启用
+- `category`: 来源类别，例如 `open-source`、`research`、`industry`
+- `trust_tier`: `high`、`medium`、`low`
+- `limit`: 单来源默认采集上限，可省略
+- `keywords`: 关键词范围
+- `quality_weight`: 来源质量权重，默认 `1.0`
+
+RSS source 额外字段：
+
+- `url`
+- `parser`: 默认 `rss`
+- `fetch_timeout_seconds`
+
+GitHub source 额外字段：
+
+- `query_keywords`
+- `min_stars`
+- `pushed_within_days`
+- `include_readme_top_n`
+
+## 10. Error Log
+
+Graph pipeline 中外部请求失败、分析失败、节点异常等错误写入：
+
+```text
+knowledge/raw/errors-{YYYY-MM-DD}.json
+```
+
+结构：
+
+```json
+{
+  "date": "2026-05-14",
+  "errored_at": "2026-05-14T08:00:00Z",
+  "items": [
+    {
+      "source_id": "example",
+      "title": "Example",
+      "reason": "analysis_failed",
+      "detail": "error summary"
+    }
+  ]
+}
+```
+
+错误日志只记录失败事实，不改变已发布 article。
+
+## 11. Manual Review Queue
+
+Reviewer 可将需要人工判断的条目写入：
+
+```text
+knowledge/raw/review-required-{YYYY-MM-DD}.json
+```
+
+结构：
+
+```json
+{
+  "date": "2026-05-14",
+  "review_required_at": "2026-05-14T08:00:00Z",
+  "items": [
+    {
+      "filepath": "knowledge/articles/2026-05-14-example.json",
+      "source_id": "example",
+      "title": "Example",
+      "reason": "low trust source with high score",
+      "quality_grade": "B",
+      "quality_score": 65.0
+    }
+  ]
+}
+```
+
+进入人工复核队列的条目不得进入最终发布索引。

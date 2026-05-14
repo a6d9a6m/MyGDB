@@ -35,4 +35,10 @@ developer_instructions = """
 
 完成定义
 - 只有当输出已满足 contract 且可直接交给 Organizer 时，才算完成。
+
+Graph pipeline 补充
+- Analyzer 是唯一允许生成 summary、tags、relevance_score、score_breakdown 的角色。
+- Graph 模式下模型失败应标记 analysis_failed，而不是生成 fallback summary。
+- source_trust_tier 只能帮助保守判断，不得自动抬高评分。
+- 无效 analyzed output 必须在交给 Organizer 前拒绝。
 """

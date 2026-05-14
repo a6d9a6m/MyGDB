@@ -42,6 +42,11 @@ knowledge/
   -> 读取 analyzed batch
   -> 过滤、去重、编号、归档
   -> 输出 knowledge/articles/*.json 与 index.json
+
+[Reviewer]
+  -> 校验 article contract 与质量门禁
+  -> 输出 passed / rejected / needs_manual_review
+  -> 必要时写入 knowledge/raw/review-required-YYYY-MM-DD.json
 ```
 
 ### 严格规则
@@ -111,6 +116,11 @@ knowledge/
 - 输出：标准 article JSON、index 更新、filtered log。
 - 不负责外部抓取或重新解释上游事实。
 
+### Reviewer
+- 输入：当前批次生成的 article JSON。
+- 输出：passed / rejected / needs_manual_review 决策。
+- 不负责采集、分析、归档，不重写 summary / tags / score。
+
 ## 统一真源
 
 以下文件是当前系统的真源：
@@ -135,7 +145,10 @@ knowledge/
 - 本仓库采用 `src/` 布局，主包为 `MyGK_DB`。
 - 根目录 `pyproject.toml` 是 Python 包元数据、依赖与命令行入口的真源。
 - `pyproject.toml` 的 `[tool.mygk-db.env]` 记录仓库脚本与 CI 需要的环境变量。
-- 运行流水线优先使用 `python -m MyGK_DB.pipeline.pipeline` 或安装后的 `mygk-pipeline`。
+- 运行流水线优先使用 `python -m MyGK_DB.pipeline.pipeline --engine graph` 或安装后的 `mygk-pipeline --engine graph`。
+- 旧版线性流水线保留为回退路径：`mygk-pipeline --engine legacy`。
+- 独立调试 LangGraph 流水线可使用 `python -m MyGK_DB.pipeline.graph` 或安装后的 `mygk-graph-pipeline`。
+- Graph checkpoint 默认使用 memory；如需 SQLite，使用 `--checkpoint sqlite --checkpoint-db .tmp/langgraph-checkpoints.sqlite`，checkpoint 文件不得提交。
 - 运行 MCP 服务优先使用 `python -m MyGK_DB.mcp_knowledge_server` 或安装后的 `mygk-mcp-server`。
 - 包内模块必须使用相对导入或完整包路径导入，不再通过修改 `sys.path` 兼容外部脚本布局。
 - 各级包目录需要保留 `__init__.py`，只暴露稳定入口，避免在包初始化阶段执行采集、分析或写盘逻辑。

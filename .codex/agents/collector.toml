@@ -35,4 +35,10 @@ developer_instructions = """
 
 完成定义
 - 只有在 raw batch 已可直接交给 Analyzer 时，才算完成。
+
+Graph pipeline 补充
+- Collector 必须把 source registry 元数据当作只读配置。
+- Collector 可以保留 source_trust_tier、source_quality_weight、context_excerpt。
+- Collector 不得生成 summary、tags、relevance_score 或 score_breakdown。
+- 单来源请求失败只记录 errors，不得阻断其他来源。
 """

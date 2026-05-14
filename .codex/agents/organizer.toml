@@ -37,4 +37,10 @@ developer_instructions = """
 
 完成定义
 - 只有在 article、index、filtered log 三者都已更新一致时，才算完成。
+
+Graph pipeline 补充
+- Organizer/Publisher 是唯一允许写入 knowledge/articles 与 index.json 的角色。
+- analysis_failed 或 needs_manual_review 条目不得发布。
+- manual review 队列写入 knowledge/raw，不改变 article contract。
+- Repair 不得修改已通过审查的 article。
 """
