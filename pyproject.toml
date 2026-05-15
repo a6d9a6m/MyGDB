@@ -27,6 +27,7 @@ dev = [
 [project.scripts]
 mygk-pipeline = "MyGK_DB.pipeline.pipeline:main"
 mygk-graph-pipeline = "MyGK_DB.pipeline.graph:main"
+mygk-build-site = "MyGK_DB.site.generate:main"
 mygk-mcp-server = "MyGK_DB.mcp_knowledge_server:main"
 mygk-migrate-articles = "MyGK_DB.scripts.migrate_articles:main"
 
