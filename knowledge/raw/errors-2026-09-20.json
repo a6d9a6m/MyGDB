@@ -1,0 +1,264 @@
+{
+  "date": "2026-09-20",
+  "errored_at": "2026-09-20T12:45:36Z",
+  "items": [
+    {
+      "source_id": "https://erichgrunewald.substack.com/p/why-you-should-almost-never-use-ai",
+      "title": "I think you should almost never use AI to write",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmpj__q5lsi/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://john.hartnup.uk/2026/06/07/ai-event-posters.html",
+      "title": "AI-generated posters don’t have to be horrible",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmpzkfv0nas/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship",
+      "title": "US Military had close call after using AI for hallucinated intelligence report",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmpcyw787g0/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://www.reddit.com/r/LocalLLaMA/comments/1wgcpww/biweekly_megathread_project_showcase/",
+      "title": "[Bi-Weekly Megathread] Project Showcase",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmpeekkhkhi/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://www.reddit.com/r/LocalLLaMA/comments/1wl9c2o/chinas_cxmt_says_new_memorychip_platform_enters/",
+      "title": "China's CXMT says new memory-chip platform enters mass production",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmp7xkwcuv1/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://www.reddit.com/r/LocalLLaMA/comments/1wleg4w/what_is_jev_and_what_is_it_used_for/",
+      "title": "What is JEV and what is it used for?",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmpf1vrtbj8/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://www.reddit.com/r/LocalLLaMA/comments/1wkxx8e/with_gemini_4_bench_goes_up/",
+      "title": "With Gemini 4, bench goes up.",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmpb56x2b3p/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://www.reddit.com/r/LocalLLaMA/comments/1wl56g2/please_stop_with_the_fp4_inference_engines_for/",
+      "title": "Please stop with the FP4 inference engines for the love of god",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmpniwj1cv4/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://www.reddit.com/r/LocalLLaMA/comments/1wl1hlj/radeon_rx_10800_xt_can_outperform_the_rtx_5090_by/",
+      "title": "Radeon RX 10800 XT can outperform the RTX 5090 by 15-25% in 4K gaming and local AI",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmpixvsj4me/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://www.reddit.com/r/LocalLLaMA/comments/1wkocvj/calling_it_now_within_the_next_year_a_major_us/",
+      "title": "Calling it now: within the next year a major US lab's frontier model will torrent itself in order to be free.",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmplg1u7o6l/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://www.reddit.com/r/LocalLLaMA/comments/1wl1yzq/i_gave_jev_laya_finetuned_modernce_and_qwen35_the/",
+      "title": "I gave Jev, Laya, finetuned ModernCE and Qwen3.5 the controls to Doom",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmp44vid3py/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://www.reddit.com/r/LocalLLaMA/comments/1wleycb/rene98cstep5previewbf16_huggingface_fork/",
+      "title": "rene98c/Step-5-Preview-BF16 • HuggingFace (Fork)",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmp1ndtefjv/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://www.reddit.com/r/LocalLLaMA/comments/1wl680s/finally_got_qwen_38_next_running_on_my_v100_6gpu/",
+      "title": "Finally got Qwen 3.8 Next running on my v100 6gpu setup (TP2 PP3)",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmpopimwj0w/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://openai.com/index/australian-youth-safety-blueprint",
+      "title": "Introducing the Australian Youth Safety Blueprint",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmplsl49hz_/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://openai.com/index/cooley-gopublic",
+      "title": "How Cooley is accelerating IPO work with ChatGPT",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmpe1s1h_1w/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://openai.com/index/astra-for-law",
+      "title": "Introducing Astra for Law",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmpo2lfsjub/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life",
+      "title": "Helping older adults use AI in everyday life",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmp1zgwnsam/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://openai.com/index/reimagining-advertising-with-ai",
+      "title": "Reimagining advertising with AI",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmpfs9158cb/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://openai.com/index/hex-gpt-6-astra",
+      "title": "Hex turns complex analysis into visual reports with GPT‑6 Astra",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmptxx8ts_v/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://openai.com/index/how-to-connect-ai-usage-to-business-value",
+      "title": "How to connect AI usage to business value",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmpv79z2wb7/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://openai.com/index/model-misalignment-reporting-framework",
+      "title": "Our framework for reporting model misalignment",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmpzn7gy8xr/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://openai.com/index/unlocking-new-ways-of-working",
+      "title": "How workers are unlocking new ways of working",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmpcrsaxn4f/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://openai.com/index/fyxer",
+      "title": "How Fyxer built an AI executive assistant people trust",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmpyxpqxypz/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://blog.google/innovation-and-ai/technology/ai/expanding-ai-economy-research-bench/",
+      "title": "New experts join Google’s AI & Economy team",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmpb7wi2v1w/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://blog.google/innovation-and-ai/technology/ai/google-flow-fashion-week/",
+      "title": "Co-creating the future of fashion with Google",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmpsw504_4g/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://blog.google/innovation-and-ai/technology/ai/google-un-data-commons-platform/",
+      "title": "Making global data easier to explore",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmpwk7qzpqt/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://blog.google/innovation-and-ai/technology/ai/ai-for-societal-impact/",
+      "title": "AI for Societal Impact",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmptntyutlv/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://blog.google/innovation-and-ai/technology/ai/ai-applications-science-people/",
+      "title": "Building AI to accelerate science and improve lives",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmplfiyrmju/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://blog.google/innovation-and-ai/technology/ai/ai-for-every-language/",
+      "title": "AI for everyone in every language",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmpr1v5n1rn/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://blog.google/innovation-and-ai/technology/ai/ai-economy-atlas-september-2026/",
+      "title": "New insights from Google’s AI & Economy ATLAS",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmphjsb7sod/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://blog.google/innovation-and-ai/technology/ai/dialogues-christina-koch/",
+      "title": "Watch astronaut Christina Koch and Google’s James Manyika discuss space, technology, and discovery.",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmpr_vwif7q/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://blog.google/innovation-and-ai/technology/developers-tools/devfest2026/",
+      "title": "DevFest is back",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmphu86tnac/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://blog.google/products-and-platforms/products/search/running-race-training-tips/",
+      "title": "3 ways to prep for your next big race with Search",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmpnrm7y51v/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://huggingface.co/blog/ibm-research/altk-evolve-consistency",
+      "title": "Your Agent Aced the Task. Will It Do It Again?",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmp2bxtx4pt/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://huggingface.co/blog/asyncgrpo-lora-hfjobs",
+      "title": "Async GRPO with LoRA across HF Jobs: a bucket, a proxy, and no NCCL",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmpn2f4xcd2/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://huggingface.co/blog/gradio-workflow-1111",
+      "title": "Rebuilding AUTOMATIC1111 with Gradio Workflow",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmpgyj2l9ye/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://huggingface.co/blog/MultiverseComputingCAI/safety-for-whom",
+      "title": "Safety for Whom? Refusing the Right Subset of a Topic, Not the Whole Topic",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmpx0i7rjtt/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://huggingface.co/blog/Hcompany/neomme",
+      "title": "NeoMME: an efficient Multimodal-native and Multilingual Encoder",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmp9gg3wuoe/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://huggingface.co/blog/grpo-with-trl-ifstruct",
+      "title": "Fine-tuning a 350M Model for Better Structured Outputs in 100 GRPO Steps",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmp0_5ctm7b/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://huggingface.co/blog/funes",
+      "title": "Give Your Coding Agents a Memory You Own",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmp6xoxbqrs/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://huggingface.co/blog/train-to-paint-with-code",
+      "title": "Training a coding model to paint watercolours with TRL and OpenEnv",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmpkja3f8cn/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://huggingface.co/blog/allenai/benchmirt",
+      "title": "BenchMIRT: What are LLM benchmarks actually measuring?",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmpib5x__8s/codex-analysis.json', '-']' returned non-zero exit status 1."
+    },
+    {
+      "source_id": "https://huggingface.co/blog/webgpu-kernels",
+      "title": "Introducing @huggingface/kernels: 200+ WebGPU Kernels for Local AI",
+      "reason": "analysis_failed",
+      "detail": "Command '['codex', 'exec', '--sandbox', 'read-only', '--cd', '/home/runner/work/MyGDB/MyGDB', '--color', 'never', '--model', 'gpt-5.4', '--output-last-message', '/home/runner/work/MyGDB/MyGDB/.tmp/tmpdlqeqexw/codex-analysis.json', '-']' returned non-zero exit status 1."
+    }
+  ]
+}
